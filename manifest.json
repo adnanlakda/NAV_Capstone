@@ -1,0 +1,51 @@
+{
+  "version": 1,
+  "locale": "en_US.cp1252",
+  "metadata": {
+    "appmode": "python-shiny",
+    "entrypoint": "app"
+  },
+  "python": {
+    "version": "3.9.13",
+    "package_manager": {
+      "name": "pip",
+      "version": "22.3.1",
+      "package_file": "requirements.txt"
+    }
+  },
+  "files": {
+    "requirements.txt": {
+      "checksum": "faf8f8130e63199cb7e185cfaf9bdf64"
+    },
+    "app.py": {
+      "checksum": "8afb7d610cd8f62f2950dc17867b676f"
+    },
+    "final_df.csv": {
+      "checksum": "a6660a3b73314f8ff9af445c75a170ff"
+    },
+    "get_category.py": {
+      "checksum": "2bdc8389eac9f5835c59b8654488a138"
+    },
+    "get_date.py": {
+      "checksum": "dcc7654aa5c69893d3c79994b003d519"
+    },
+    "get_location.py": {
+      "checksum": "99c4bea054a24264578f59d06041c1da"
+    },
+    "get_sub_category.py": {
+      "checksum": "98382f36306535ba1b87a1dc91e02060"
+    },
+    "kws.csv": {
+      "checksum": "42a225de1ca2f8e60ef7def3b8a39a67"
+    },
+    "master_urls.csv": {
+      "checksum": "e55678fe74e0ceb5b9de57b81fd4a202"
+    },
+    "master_urls.xlsx": {
+      "checksum": "2569f3e1adde8d825a56907c1ace722a"
+    },
+    "sub_kws.csv": {
+      "checksum": "d4b03754bb59970dbe97c91e9b1797f4"
+    }
+  }
+}

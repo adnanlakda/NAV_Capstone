@@ -1,0 +1,247 @@
+﻿Latitude,Longitude,Date,Town,Oblast,Country,Incident_type,Incident_sub_type,Source_1
+47.9646928,37.8380793,2021-11-14,Donetsk,Donetsk Oblast,UA,targeted,intimidation_score,https://kyivindependent.com/national/bellingcat-secret-donetsk-torture-prison-is-controlled-by-russia
+48.1031637,38.5920837,2021-11-16,NA,Donbas,UA,air,loitering_munition_score,https://kyivindependent.com/national/ukraines-military-intercepts-russian-drone-in-donbas
+46.482526,30.7233095,2021-11-21,Odesa,Odessa Oblast,UA,land,direct_fire_score,https://kyivindependent.com/national/ukraines-defense-intelligence-chief-russia-is-preparing-to-attack-in-late-january
+48.6683422,38.4835738,2021-11-21,Katerynivka,Luhansk Oblast,UA,land,indirect_fire_score,https://kyivindependent.com/national/russian-led-militants-shell-2-ukrainian-villages
+48.1031637,38.5920837,2021-11-21,NA,Donbas,UA,blast,uxo_score,https://kyivindependent.com/national/protesters-demand-dismissal-of-zelenskys-chief-of-staff-yermak
+48.1031637,38.5920837,2021-12-03,NA,Donbas,UA,security,arrest_score,https://kyivindependent.com/national/defense-minister-reznikov-russia-might-use-94300-troops-to-invade-ukraine
+48.1031637,38.5920837,2021-12-05,NA,Donbas,UA,air,uav_score,https://kyivindependent.com/national/bloomberg-turkey-ready-to-sell-over-20-bayraktar-drones-to-ukraine
+48.136596,37.7491335,2021-12-07,Avdiivka,Donetsk Oblast,UA,land,indirect_fire_score,https://kyivindependent.com/national/russia-brings-more-tanks-artillery-to-ukrainian-border
+48.1031637,38.5920837,2021-12-09,NA,Donbas,UA,land,direct_fire_score,https://kyivindependent.com/national/javelin-anti-tank-missiles-seen-deployed-to-donbas
+48.1031637,38.5920837,2021-12-13,NA,Donbas,UA,targeted,abduction_score,https://kyivindependent.com/national/us-think-tank-russia-unlikely-to-invade-ukraine-wants-to-force-concessions
+48.1031637,38.5920837,2021-12-15,NA,Donbas,UA,targeted,abduction_score,https://kyivindependent.com/national/why-russia-wants-autonomy-for-occupied-donbas-explainer
+50.4501,30.5234,2021-12-16,Kyiv,Kyiv City,UA,security,arrest_score,https://kyivindependent.com/national/sbu-busts-islamic-state-cell-kyiv
+48.1031637,38.5920837,2021-12-17,NA,Donbas,UA,security,arrest_score,https://kyivindependent.com/national/us-senate-introduces-bill-to-give-ukraine-450-million-in-military-aid-in-2022
+48.1031637,38.5920837,2021-12-16,NA,Donbas,UA,targeted,abduction_score,https://kyivindependent.com/national/russian-court-openly-documents-moscows-military-presence-in-donbas
+48.1031637,38.5920837,2021-12-24,NA,Donbas,UA,targeted,abduction_score,https://kyivindependent.com/national/putins-press-conference-statements-about-ukraine-debunked
+48.1031637,38.5920837,2021-12-27,NA,Donbas,UA,security,arrest_score,https://kyivindependent.com/national/kyiv-to-create-territorial-defense-headquarters-ahead-of-russias-potential-invasion
+48.1031637,38.5920837,2021-12-28,NA,Donbas,UA,targeted,abduction_score,https://kyivindependent.com/national/ukraine-daily-dec-28
+48.1031637,38.5920837,2021-12-29,NA,Donbas,UA,targeted,abduction_score,https://kyivindependent.com/national/ukraine-daily-dec-29
+48.3800938,37.9336111,2021-12-31,Shumy,Donetsk Oblast,UA,land,direct_fire_score,https://kyivindependent.com/national/these-ukrainian-soldiers-were-killed-in-donbas-in-2021
+48.1031637,38.5920837,2022-01-04,NA,Donbas,UA,air,surface_to_air_score,https://kyivindependent.com/national/ukraine-daily-jan-3-news-round-up-2
+48.1031637,38.5920837,2022-01-06,NA,Donbas,UA,security,arrest_score,https://kyivindependent.com/national/ukraine-daily-jan-5-news-round-up
+48.1031637,38.5920837,2022-01-06,NA,Donbas,UA,security,arrest_score,https://kyivindependent.com/national/court-seizes-poroshenkos-assets-in-treason-case
+48.1031637,38.5920837,2022-01-07,NA,Donbas,UA,security,arrest_score,https://kyivindependent.com/national/ukraine-daily-jan-6-news-round-up
+48.1031637,38.5920837,2022-01-10,NA,Donbas,UA,security,arrest_score,https://kyivindependent.com/national/court-extends-medvedchuks-house-arrest-in-treason-case
+48.1031637,38.5920837,2022-01-14,NA,Donbas,UA,security,arrest_score,https://kyivindependent.com/national/russian-military-runs-combat-readiness-tests-in-far-east
+48.1031637,38.5920837,2022-01-15,NA,Donbas,UA,targeted,abduction_score,https://kyivindependent.com/national/russian-led-militants-release-toxic-ammonia-in-donbas-provoking-red-flag-fears
+48.1031637,38.5920837,2022-01-17,NA,Donbas,UA,security,arrest_score,https://kyivindependent.com/national/ukraine-daily-weekend-news-round-up
+48.1031637,38.5920837,2022-01-18,NA,Donbas,UA,security,military_exercise_score,https://kyivindependent.com/national/russia-moves-troops-to-belarus-ahead-of-february-joint-military-drills
+49.9935,36.230383,2022-01-19,Kharkiv,Kharkiv Oblast,UA,security,arrest_score,https://kyivindependent.com/national/white-house-russia-was-preparing-evacuation-from-kyiv-embassy-amid-rising-tensions
+50.4501,30.5234,2022-01-20,Kyiv,Kyiv City,UA,security,arrest_score,https://kyivindependent.com/national/jan-19-news-wrap-up
+49.9935,36.230383,2022-01-22,Kharkiv,Kharkiv Oblast,UA,security,arrest_score,https://kyivindependent.com/national/jan-21-news-wrap-up
+50.4501,30.5234,2022-01-24,Kyiv,Kyiv City,UA,security,arrest_score,https://kyivindependent.com/national/uk-begins-to-withdraw-non-essential-embassy-staff-eu-wont-do-the-same-says-borell
+48.1031637,38.5920837,2022-01-25,NA,Donbas,UA,land,direct_fire_score,https://kyivindependent.com/national/us-delivers-300-more-javelins-to-ukraine
+50.6199,26.251617,2022-01-26,Rivne,Rivne Oblast,UA,security,arrest_score,https://kyivindependent.com/national/jan-25-news-wrap-up
+50.4501,30.5234,2022-01-26,Kyiv,Kyiv City,UA,security,arrest_score,https://kyivindependent.com/national/us-nato-dont-cave-in-to-russian-demands
+48.464717,35.046183,2022-01-27,Dnipro,Dnipropetrovsk Oblast,UA,security,arrest_score,https://kyivindependent.com/national/conscript-arrested-after-allegedly-killing-5-people-in-unprecedented-shooting-spree
+48.1031637,38.5920837,2022-01-29,NA,Donbas,UA,security,arrest_score,https://kyivindependent.com/national/embassy-advice-guide-for-foreign-citizens-in-ukraine
+48.1031637,38.5920837,2022-01-31,NA,Donbas,UA,security,arrest_score,https://kyivindependent.com/national/want-to-help-ukraines-military-as-a-foreigner-heres-what-you-can-do
+48.1031637,38.5920837,2022-01-30,NA,Donbas,UA,security,arrest_score,https://kyivindependent.com/national/weekend-news-wrap-up-2
+46.975033,31.994583,2022-02-01,Mykolaiv,Mykolaiv Oblast,UA,security,arrest_score,https://kyivindependent.com/national/uks-defense-aid-to-ukraine-skyrockets-amid-russia-threat
+49.9742883,23.5488713,2022-02-03,Starychi,Lviv Oblast,UA,security,arrest_score,https://kyivindependent.com/national/canadian-military-veteran-wants-his-country-to-act-on-ukraine
+50.4501,30.5234,2022-02-02,Kyiv,Kyiv City,UA,air,fixed_wing_score,https://kyivindependent.com/national/dutch-pm-urges-justice-for-mh17-victims-pushes-to-continue-dialogue-with-russia
+50.4501,30.5234,2022-02-07,Kyiv,Kyiv City,UA,security,arrest_score,https://kyivindependent.com/national/will-russia-launch-large-scale-war-or-limited-invasion-analysis-of-3-popular-scenarios
+51.4045032,30.0542331,2022-02-05,Pryp'yat',Kyiv Oblast,UA,security,military_exercise_score,https://kyivindependent.com/national/ukraine-holds-urban-warfare-drills-in-chornobyl-zone
+48.1031637,38.5920837,2022-02-09,NA,Donbas,UA,targeted,abduction_score,https://kyivindependent.com/national/is-ukraine-ready-for-cyberwar-with-russia-fears-mount-as-military-build-up-continues
+48.1031637,38.5920837,2022-02-13,NA,Donbas,UA,security,arrest_score,https://kyivindependent.com/national/center-for-defense-strategies-can-ukraine-really-be-invaded-scenarios-for-a-russian-attack-analysis
+50.4501,30.5234,2022-02-14,Kyiv,Kyiv City,UA,security,arrest_score,https://kyivindependent.com/national/scholz-warns-moscow-of-wide-reaching-consequences-stays-silent-on-nord-stream-2
+48.1031637,38.5920837,2022-02-16,NA,Donbas,UA,blast,uxo_score,https://kyivindependent.com/national/russian-disinformation-targets-western-support
+48.7424239,38.373749,2022-02-17,Vrubivka,Luhansk Oblast,UA,land,indirect_fire_score,https://kyivindependent.com/national/over-40-shelling-incidents-leave-5-injured-in-donbas
+48.1031637,38.5920837,2022-02-19,NA,Donbas,UA,land,indirect_fire_score,https://kyivindependent.com/national/biden-warns-that-putin-decided-to-invade-as-russian-proxies-in-ukraine-appear-to-stage-escalation
+48.1031637,38.5920837,2022-02-21,NA,Donbas,UA,blast,uxo_score,https://kyivindependent.com/national/explainer-why-did-putins-regime-engineer-current-military-crisis-over-ukraine
+48.1031637,38.5920837,2022-02-19,NA,Donbas,UA,land,indirect_fire_score,https://kyivindependent.com/national/ukrainian-soldier-anton-sidorov-was-killed-by-shelling-in-donbas
+48.1031637,38.5920837,2022-02-19,NA,Donbas,UA,targeted,abduction_score,https://kyivindependent.com/national/russias-proxies-declare-mobilization-amid-heightened-tensions-in-donbas
+48.1031637,38.5920837,2022-02-19,NA,Donbas,UA,targeted,abduction_score,https://kyivindependent.com/national/ukrainians-inside-occupied-donbas-stuck-between-hope-and-fear
+48.1031637,38.5920837,2022-02-19,NA,Donbas,UA,security,arrest_score,https://kyivindependent.com/national/zelenskys-full-speech-at-munich-security-conference
+48.6798458,39.4672507,2022-02-20,Stanytsia Luhanska,Luhansk Oblast,UA,land,indirect_fire_score,https://kyivindependent.com/national/russia-intensifies-barrage-of-flimsy-yet-dangerous-disinformation
+48.1031637,38.5920837,2022-02-21,NA,Donbas,UA,security,arrest_score,https://kyivindependent.com/national/regular-kyivans-get-ready-to-help-repel-russian-attack
+48.1031637,38.5920837,2022-02-21,NA,Donbas,UA,targeted,abduction_score,https://kyivindependent.com/national/breaking-russia-recognizes-occupied-regions-in-ukraine-as-independent-states
+48.418005,38.031116,2022-02-21,Zaitseve,Donetsk Oblast,UA,land,indirect_fire_score,https://kyivindependent.com/national/3-killed-5-injured-in-russian-shelling-in-donbas
+48.1031637,38.5920837,2022-02-22,NA,Donbas,UA,targeted,abduction_score,https://kyivindependent.com/national/putin-sends-troops-in-kremlin-occupied-donbas
+48.1031637,38.5920837,2022-02-22,NA,Donbas,UA,targeted,abduction_score,https://kyivindependent.com/national/zelensky-addresses-nation-as-russia-re-invades
+50.4501,30.5234,2022-02-22,Kyiv,Kyiv City,UA,land,indirect_fire_score,https://kyivindependent.com/national/ukrainian-civilians-fearlessly-prepare-for-russias-offensive
+48.1031637,38.5920837,2022-02-27,NA,Donbas,UA,blast,uxo_score,https://kyivindependent.com/national/amid-fierce-defense-ukraine-fails-russian-blitz-victory-plans
+49.9935,36.230383,2022-02-24,Kharkiv,Kharkiv Oblast,UA,land,indirect_fire_score,https://kyivindependent.com/national/russia-attacks-wide-range-of-targets-in-ukraine-live-updates
+47.097133,37.543367,2022-02-24,Mariupol,Donetsk Oblast,UA,land,indirect_fire_score,https://kyivindependent.com/national/dozens-of-ukrainians-killed-within-hours-of-russian-invasion
+50.4501,30.5234,2022-02-25,Kyiv,Kyiv City,UA,security,arrest_score,https://kyivindependent.com/national/ukraine-ready-to-negotiate-with-russia
+50.3150962,34.9005644,2022-02-26,Okhtyrka,Sumy Oblast,UA,air,fixed_wing_score,https://kyivindependent.com/national/russia-faces-heavy-losses-as-it-attacks-ukraine-on-all-fronts
+48.411634,33.6941624,2022-02-28,P'yatykhatky,Dnipropetrovsk Oblast,UA,land,indirect_fire_score,https://kyivindependent.com/national/kharkiv-barraged-with-multiple-rocket-launchers-killing-a-dozen-of-people
+48.1031637,38.5920837,2022-02-28,NA,Donbas,UA,land,direct_fire_score,https://kyivindependent.com/national/first-round-of-ukraine-russia-negotiations-inconclusive-as-casualties-pile-up
+50.4501,30.5234,2022-03-02,Kyiv,Kyiv City,UA,missile,,https://kyivindependent.com/national/kyivans-hide-in-subways-as-russian-forces-bombard-the-capital
+48.1031637,38.5920837,2022-03-03,NA,Donbas,UA,security,arrest_score,https://kyivindependent.com/national/qa-with-charge-daffaires-kristina-kvien-from-now-on-russia-will-be-a-pariah-state
+48.6208,22.287883,2022-03-04,NA,Zakarpattia Oblast,UA,land,indirect_fire_score,https://kyivindependent.com/national/as-their-universities-are-shelled-fleeing-foreign-students-wait-days-at-borders
+47.8388,35.139567,2022-03-04,Zaporizhzhia,Zaporizhia Oblast,UA,security,arrest_score,https://kyivindependent.com/national/russia-captures-europes-largest-nuclear-power-plant-in-ukraine
+50.4501,30.5234,2022-03-05,Kyiv,Kyiv City,UA,targeted,abduction_score,https://kyivindependent.com/national/ukrainian-loses-parent-to-russian-propaganda-i-can-consider-myself-an-orphan
+50.4501,30.5234,2022-03-05,Kyiv,Kyiv City,UA,land,indirect_fire_score,https://kyivindependent.com/national/10-days-of-suffering-russias-war-against-ukraine-in-photos
+48.1031637,38.5920837,2022-03-06,NA,Donbas,UA,land,indirect_fire_score,https://kyivindependent.com/national/civilians-flee-in-terror-as-ukraines-military-deter-russia-in-irpin
+50.4501,30.5234,2022-03-09,Kyiv,Kyiv City,UA,land,indirect_fire_score,https://kyivindependent.com/national/ukraines-biggest-childrens-hospital-treats-people-wounded-by-russians
+47.097133,37.543367,2022-03-09,Mariupol,Donetsk Oblast,UA,air,fixed_wing_score,https://kyivindependent.com/national/ukraine-evacuates-48000-people-many-still-in-dire-conditions-amid-russian-attacks
+47.097133,37.543367,2022-03-16,Mariupol,Donetsk Oblast,UA,land,indirect_fire_score,https://kyivindependent.com/national/300000-people-trapped-in-besieged-mariupol-face-living-hell
+50.4501,30.5234,2022-03-15,Kyiv,Kyiv City,UA,land,indirect_fire_score,https://kyivindependent.com/national/20-days-of-russias-war-in-ukraine-in-photos
+50.3482,30.95615,2022-03-16,Boryspil',Kyiv Oblast,UA,security,arrest_score,https://kyivindependent.com/national/family-and-fellow-soldiers-bid-farewell-to-heroic-colonel-gudz-killed-in-donbas
+48.1031637,38.5920837,2022-03-16,NA,Donbas,UA,missile,,https://kyivindependent.com/national/ukraines-old-air-defense-proves-unexpectedly-effective-in-combat
+50.4501,30.5234,2022-03-17,Kyiv,Kyiv City,UA,land,indirect_fire_score,https://kyivindependent.com/national/russian-soldiers-shoot-dead-mother-of-two-as-she-drives-family-to-safety
+48.015883,37.80285,2022-03-19,Donetsk,Donetsk Oblast,UA,targeted,abduction_score,https://kyivindependent.com/national/russia-throws-untrained-civilians-from-occupied-donbas-into-hot-spots-of-its-war-in-ukraine
+50.4501,30.5234,2022-03-20,Kyiv,Kyiv City,UA,missile,,https://kyivindependent.com/national/residents-of-building-hit-by-russian-missile-come-to-ruins-of-their-homes
+50.4501,30.5234,2022-03-21,Kyiv,Kyiv City,UA,missile,,https://kyivindependent.com/national/at-least-8-killed-by-russian-missile-attack-on-kyiv-shopping-mall-photos
+49.839683,24.029717,2022-03-23,Lviv,Lviv Oblast,UA,land,indirect_fire_score,https://kyivindependent.com/national/ukraines-unofficial-western-capital-lviv-is-calm-but-prepares-for-war
+50.4501,30.5234,2022-03-24,Kyiv,Kyiv City,UA,land,indirect_fire_score,https://kyivindependent.com/national/fearless-kyiv-utility-workers-keep-the-city-running-under-russias-shelling
+48.1031637,38.5920837,2022-03-23,NA,Donbas,UA,security,arrest_score,https://kyivindependent.com/national/ukrainian-journalist-released-from-russian-captivity-they-were-most-interested-in-finding-organizers-of-pro-ukrainian-rallies
+50.4513592,30.2265211,2022-03-24,Stoyanka,Kyiv Oblast,UA,land,indirect_fire_score,https://kyivindependent.com/national/inside-massacre-of-civilian-evacuees-outside-kyiv
+50.553333,30.213517,2022-03-31,Bucha,Kyiv Oblast,UA,targeted,abduction_score,https://kyivindependent.com/national/inside-a-hospital-in-occupied-town-near-kyiv
+50.51875,30.239783,2022-04-01,Irpin,Kyiv Oblast,UA,land,indirect_fire_score,https://kyivindependent.com/national/foreign-volunteers-help-fight-russia-in-irpin
+48.1031637,38.5920837,2022-04-01,NA,Donbas,UA,land,indirect_fire_score,https://kyivindependent.com/national/ukraines-railway-keeps-the-country-running-amid-war
+50.553333,30.213517,2022-04-02,Bucha,Kyiv Oblast,UA,targeted,murder_score,https://kyivindependent.com/national/hundreds-of-murdered-civilians-discovered-as-russians-withdraw-from-towns-near-kyiv-graphic-images
+48.1031637,38.5920837,2022-04-06,NA,Donbas,UA,security,arrest_score,https://kyivindependent.com/national/new-phase-in-war-opens-up-as-ukraine-defeats-russia-in-battle-of-kyiv
+50.6445031,29.9146299,2022-04-06,Borodyanka,Kyiv Oblast,UA,land,direct_fire_score,https://kyivindependent.com/national/as-ukraine-regains-control-of-borodyanka-area-more-russians-atrocities-come-to-light
+50.4501,30.5234,2022-04-07,Kyiv,Kyiv City,UA,targeted,abduction_score,https://kyivindependent.com/national/bucha-massacre-survivors-why-do-russians-hate-us-so-much
+48.1031637,38.5920837,2022-04-09,NA,Donbas,UA,land,indirect_fire_score,https://kyivindependent.com/national/voices-of-sieged-mariupol-its-not-even-comparable-to-hell
+48.738967,37.58435,2022-04-08,Kramatorsk,Donetsk Oblast,UA,missile,,https://kyivindependent.com/national/at-least-39-killed-by-russian-strike-on-train-station-with-evacuating-civilians
+47.097133,37.543367,2022-04-11,Mariupol,Donetsk Oblast,UA,land,indirect_fire_score,https://kyivindependent.com/national/defenders-of-besieged-mariupol-plead-for-help-criticize-commandment
+50.579141,30.2150743,2022-04-15,Hostomel',Kyiv Oblast,UA,land,direct_fire_score,https://kyivindependent.com/national/chief-pilot-of-destroyed-an-225-we-must-complete-the-second-mriya
+50.4501,30.5234,2022-04-13,Kyiv,Kyiv City,UA,security,arrest_score,https://kyivindependent.com/national/explainer-who-is-viktor-medvedchuk-why-his-arrest-big-deal
+49.0161213,38.3751404,2022-04-14,Rubizhne,Luhansk Oblast,UA,land,indirect_fire_score,https://kyivindependent.com/national/50-days-of-russias-war-in-photos
+50.553333,30.213517,2022-04-22,Bucha,Kyiv Oblast,UA,targeted,abduction_score,https://kyivindependent.com/national/uncovering-the-scope-of-the-bucha-massacre
+46.482526,30.7233095,2022-04-23,Odesa,Odessa Oblast,UA,targeted,abduction_score,https://kyivindependent.com/national/zelensky-gives-presser-in-kyiv-subway-doesnt-hold-back-on-russian-bastards
+49.9935,36.230383,2022-04-24,Kharkiv,Kharkiv Oblast,UA,land,indirect_fire_score,https://kyivindependent.com/national/kharkiv-residents-under-fire-i-hear-some-shelling-every-hour
+50.4501,30.5234,2022-04-25,Kyiv,Kyiv City,UA,security,arrest_score,https://kyivindependent.com/national/ukrainian-law-enforcers-search-for-collaborators-who-helped-russians
+50.553333,30.213517,2022-04-29,Bucha,Kyiv Oblast,UA,land,indirect_fire_score,https://kyivindependent.com/national/wheelchair-bound-bucha-resident-on-surviving-russian-occupation-i-hope-no-one-will-have-to-live-through-this
+48.1031637,38.5920837,2022-05-02,NA,Donbas,UA,land,indirect_fire_score,https://kyivindependent.com/national/families-mourn-fallen-defenders-of-ukraine
+47.8388,35.139567,2022-04-30,Zaporizhzhia,Zaporizhia Oblast,UA,security,arrest_score,https://kyivindependent.com/national/zaporizhzhia-fights-as-russians-intensify-offensive-in-region
+48.1132559,32.7658684,2022-05-03,Dolyns'ka,Kirovohrad Oblast,UA,missile,,https://kyivindependent.com/national/russian-missiles-rain-down-all-over-ukraine-fired-mostly-from-caspian-sea
+47.8388,35.139567,2022-05-07,Zaporizhzhia,Zaporizhia Oblast,UA,security,arrest_score,https://kyivindependent.com/national/russias-offensive-in-donbas-bogs-down
+48.1031637,38.5920837,2022-05-09,NA,Donbas,UA,security,arrest_score,https://kyivindependent.com/national/transnistria-becomes-potential-hotspot-in-russias-war
+48.1031637,38.5920837,2022-05-09,NA,Donbas,UA,land,indirect_fire_score,https://kyivindependent.com/national/with-mined-beaches-extended-curfew-ukraines-main-tourist-hub-odesa-is-ready-to-fight
+49.2121445,37.2665006,2022-05-13,Izyum,Kharkiv Oblast,UA,land,indirect_fire_score,https://kyivindependent.com/national/ukrainian-forces-hold-off-russians-in-donetsk-oblast
+48.1031637,38.5920837,2022-05-14,NA,Donbas,UA,targeted,abduction_score,https://kyivindependent.com/national/azovstal-garrison-well-keep-fighting-as-long-as-were-alive
+48.6619761,37.5064317,2022-05-14,Malotaranivka,Donetsk Oblast,UA,air,fixed_wing_score,https://kyivindependent.com/national/people-of-kramatorsk-endure-war-by-living-and-helping
+50.3810084,29.932468,2022-05-19,Motyzhyn,Kyiv Oblast,UA,targeted,murder_score,https://kyivindependent.com/national/daughter-mourns-her-loved-ones-killed-in-kyiv-oblast-humans-cant-do-what-they-did-to-my-family
+47.097133,37.543367,2022-05-15,Mariupol,Donetsk Oblast,UA,targeted,abduction_score,https://kyivindependent.com/national/wives-of-besieged-azovstal-garrison-we-need-to-save-heroes-lives-not-give-posthumous-awards
+46.7737707,36.8034779,2022-05-16,Berdyans'k,Zaporizhia Oblast,UA,targeted,abduction_score,https://kyivindependent.com/national/mariupol-evacuees-people-just-dying-city-in-chaos
+47.097133,37.543367,2022-05-16,Mariupol,Donetsk Oblast,UA,targeted,abduction_score,https://kyivindependent.com/national/264-azovstal-defenders-evacuated-to-russian-controlled-territory-promised-medical-treatment
+48.1031637,38.5920837,2022-05-21,NA,Donbas,UA,security,arrest_score,https://kyivindependent.com/national/andriy-zagorodnyuk-those-saying-ukraine-cant-win-dont-understand-the-situation
+47.8388,35.139567,2022-05-22,Zaporizhzhia,Zaporizhia Oblast,UA,targeted,abduction_score,https://kyivindependent.com/national/ukrainians-fleeing-russian-occupation-we-decided-it-was-scarier-to-stay-so-we-left
+46.975033,31.994583,2022-05-24,Mykolaiv,Mykolaiv Oblast,UA,targeted,abduction_score,https://kyivindependent.com/national/mykolaiv-holds-on-through-russian-bombardment-lack-of-water
+48.9897585,37.8049964,2022-05-27,Lyman,Donetsk Oblast,UA,land,indirect_fire_score,https://kyivindependent.com/national/welcome-to-hell-ukrainian-airborne-fighting-russia-in-donbas-woods
+49.9935,36.230383,2022-06-07,Kharkiv,Kharkiv Oblast,UA,targeted,abduction_score,https://kyivindependent.com/national/portrait-of-the-invader-understanding-the-russian-soldier
+48.1031637,38.5920837,2022-06-15,NA,Donbas,UA,land,indirect_fire_score,https://kyivindependent.com/national/ukraines-military-expects-massive-arms-supplies-as-russias-war-deteriorates
+48.9481767,38.4878773,2022-06-15,Severodonetsk,Luhansk Oblast,UA,land,indirect_fire_score,https://kyivindependent.com/national/russian-troops-seize-majority-of-embattled-sievierodonetsk-civilian-evacuation-continues-despite-complications
+48.1031637,38.5920837,2022-06-16,NA,Donbas,UA,land,indirect_fire_score,https://kyivindependent.com/national/ukrainian-counterattacks-exploit-russias-focus-but-are-stymied-by-lack-of-weapons
+50.4501,30.5234,2022-06-16,Kyiv,Kyiv City,UA,targeted,abduction_score,https://kyivindependent.com/national/leaders-of-france-germany-italy-visit-ukraine-to-underscore-support-despite-criticism
+48.1031637,38.5920837,2022-06-17,NA,Donbas,UA,security,arrest_score,https://kyivindependent.com/national/putin-claims-western-sanctions-failed-says-us-fading-world-power
+48.1031637,38.5920837,2022-06-19,NA,Donbas,UA,air,loitering_munition_score,https://kyivindependent.com/national/serhiy-prytula-flawed-political-system-has-not-vanished-it-has-laid-low-until-war-ends
+48.4518702,38.4948983,2022-06-22,Stepanivka,Luhansk Oblast,UA,security,arrest_score,https://kyivindependent.com/national/volunteers-keep-donbas-running-through-its-darkest-hours
+48.1031637,38.5920837,2022-06-25,NA,Donbas,UA,missile,,https://kyivindependent.com/national/sievierodonetsk-falls-to-russia-fighting-shifts-to-lysychansk
+49.065783,33.410033,2022-06-28,Kremenchuk,Poltava Oblast,UA,missile,,https://kyivindependent.com/national/minister-says-at-least-18-killed-seven-body-fragments-found-after-russian-missile-strike-on-kremenchuk-mall
+48.9110806,38.4264294,2022-06-30,Lysychans'k,Luhansk Oblast,UA,land,indirect_fire_score,https://kyivindependent.com/national/as-ukraine-withdraws-from-sievierodonetsk-battle-of-donbas-enters-next-phase
+46.0291026,30.3651852,2022-07-01,Serhiivka,Odessa Oblast,UA,missile,,https://kyivindependent.com/national/russias-missile-attack-on-residential-building-leisure-complex-in-odesa-oblast-kills-19
+48.574041,39.307815,2022-07-03,Luhansk,Luhansk Oblast,UA,security,arrest_score,https://kyivindependent.com/national/both-ukraine-and-russia-claim-to-control-lysychansk-ukraines-last-major-bastion-in-luhansk-oblast
+50.4501,30.5234,2022-07-06,Kyiv,Kyiv City,UA,missile,,https://kyivindependent.com/national/kyiv-residents-lose-their-homes-after-latest-missile-strike
+48.8532,37.6053,2022-07-06,Slovyansk,Donetsk Oblast,UA,land,indirect_fire_score,https://kyivindependent.com/national/sloviansk-under-fire-as-russias-war-enters-new-phase
+48.015883,37.80285,2022-07-07,Donetsk,Donetsk Oblast,UA,land,indirect_fire_score,https://kyivindependent.com/national/1234
+50.4501,30.5234,2022-07-08,Kyiv,Kyiv City,UA,security,arrest_score,https://kyivindependent.com/national/ukrainians-decry-assassination-of-japans-ex-pm-shinzo-abe
+49.233083,28.468217,2022-07-14,Vinnytsia,Vinnytsia Oblast,UA,missile,,https://kyivindependent.com/national/russian-missile-hits-downtown-vinnytsia
+49.233083,28.468217,2022-07-14,Vinnytsia,Vinnytsia Oblast,UA,targeted,arson_score,https://kyivindependent.com/national/victims-burned-alive-in-deadly-russian-strike-on-vinnytsia-says-local-prosecutor
+50.4501,30.5234,2022-07-17,Kyiv,Kyiv City,UA,security,arrest_score,https://kyivindependent.com/national/zelensky-fires-prosecutor-general-security-service-chief
+48.560407,38.6487184,2022-07-20,Kadiivka,Luhansk Oblast,UA,land,indirect_fire_score,https://kyivindependent.com/national/exclusive-inside-ukraines-covert-operation-to-take-out-elite-wagner-group-mercenaries-in-donbas
+48.1031637,38.5920837,2022-07-25,NA,Donbas,UA,targeted,abduction_score,https://kyivindependent.com/national/after-8-years-of-helping-people-in-war-torn-east-vostok-sos-humanitarian-efforts-become-as-essential-as-ever
+47.910483,33.391783,2022-07-25,Kryvyi Rih,Dnipropetrovsk Oblast,UA,security,arrest_score,https://kyivindependent.com/national/industrial-kryvyi-rih-strives-for-survival-restoring-production-amid-war
+50.4501,30.5234,2022-07-26,Kyiv,Kyiv City,UA,missile,,https://kyivindependent.com/national/little-heroes-children-raise-money-to-support-ukraines-fight
+48.1031637,38.5920837,2022-07-29,NA,Donbas,UA,land,indirect_fire_score,https://kyivindependent.com/national/dozens-of-ukrainian-prisoners-of-war-killed-in-russian-captivity
+48.1031637,38.5920837,2022-08-02,NA,Donbas,UA,targeted,abduction_score,https://kyivindependent.com/national/exclusive-escaping-forced-conscription-in-russian-occupied-donetsk
+48.1031637,38.5920837,2022-08-03,NA,Donbas,UA,land,indirect_fire_score,https://kyivindependent.com/national/the-battle-to-end-the-war-ukraine-has-a-chance-to-win-initiative-from-russia
+48.1031637,38.5920837,2022-08-08,NA,Donbas,UA,land,direct_fire_score,https://kyivindependent.com/national/russia-masses-forces-in-south-ahead-of-counterattack
+47.5015067,34.6341859,2022-08-10,Enerhodar,Zaporizhia Oblast,UA,land,indirect_fire_score,https://kyivindependent.com/national/occupied-ukrainian-plant-becomes-epicenter-of-russias-nuclear-blackmail
+46.975033,31.994583,2022-08-13,Mykolaiv,Mykolaiv Oblast,UA,land,indirect_fire_score,https://kyivindependent.com/national/mykolaiv-mayor-wartime-duty-taking-care-of-the-living-counting-the-dead
+48.1031637,38.5920837,2022-08-12,NA,Donbas,UA,land,indirect_fire_score,https://kyivindependent.com/national/why-ukraine-struggles-to-combat-russias-artillery-superiority
+48.1031637,38.5920837,2022-08-14,NA,Donbas,UA,targeted,abduction_score,https://kyivindependent.com/national/people-flee-donbas-under-fire-in-mandatory-evacuation-drive
+52.0774568,33.6995783,2022-08-16,Mais'ke,Sumy Oblast,UA,targeted,abduction_score,https://kyivindependent.com/national/explosions-at-ammunition-depot-damage-railway-in-occupied-crimea
+50.553333,30.213517,2022-08-18,Bucha,Kyiv Oblast,UA,targeted,abduction_score,https://kyivindependent.com/national/months-after-russian-withdrawal-bucha-begins-burying-bodies-of-unidentified-victims-photos
+50.4501,30.5234,2022-08-20,Kyiv,Kyiv City,UA,targeted,abduction_score,https://kyivindependent.com/national/relatives-sound-alarm-as-prominent-activist-in-russian-captivity-painted-nazi
+50.4501,30.5234,2022-08-23,Kyiv,Kyiv City,UA,targeted,abduction_score,https://kyivindependent.com/national/as-russia-attempts-to-destroy-ukrainian-identity-ukraine-cherishes-its-blue-yellow-banner-photos
+50.465676,30.4759341,2022-08-24,Kyiv,Kyiv City,UA,land,indirect_fire_score,https://kyivindependent.com/national/they-are-why-ukraine-stands-remembering-fallen-ukrainian-soldiers
+49.9627279,33.6053331,2022-08-24,Myrhorod,Poltava Oblast,UA,missile,,https://kyivindependent.com/national/russian-missile-strike-on-train-station-kills-at-least-15-people-dozens-more-injured
+48.3972873,37.855245,2022-08-27,Toretsk,Donetsk Oblast,UA,targeted,abduction_score,https://kyivindependent.com/national/people-forced-to-flee-donetsk-oblast-as-russia-bombards-region-nonstop-photos
+49.839683,24.029717,2022-08-29,Lviv,Lviv Oblast,UA,land,indirect_fire_score,https://kyivindependent.com/national/many-ukrainian-schools-to-reopen-this-week-as-russias-war-continues
+46.635417,32.616867,2022-08-29,Kherson,Kherson Oblast,UA,land,indirect_fire_score,https://kyivindependent.com/national/ukraine-war-latest-military-says-counteroffensive-in-south-begins-as-russia-continues-assault-on-ukraine
+48.5986674,37.9980367,2022-08-30,Bakhmut,Donetsk Oblast,UA,land,indirect_fire_score,https://kyivindependent.com/national/ukraine-war-latest-southern-counteroffensive-underway-as-russia-ramps-up-shelling-in-east
+46.635417,32.616867,2022-08-31,Kherson,Kherson Oblast,UA,land,indirect_fire_score,https://kyivindependent.com/national/ukraine-war-latest-russia-blocks-iaea-mission-to-zaporizhzhia-plant-as-ukraine-continues-southern-counteroffensive
+48.1031637,38.5920837,2022-09-01,NA,Donbas,UA,targeted,abduction_score,https://kyivindependent.com/national/ukraine-war-latest-iaea-team-finally-arrives-at-zaporizhzhia-nuclear-plant-as-intense-battles-continue-across-front-line
+49.839683,24.029717,2022-09-01,Lviv,Lviv Oblast,UA,missile,,https://kyivindependent.com/national/children-go-back-to-school-as-russias-war-rages-on
+48.9764573,23.9892458,2022-09-06,Dolyna,Ivano-Frankivsk Oblast,UA,targeted,abduction_score,https://kyivindependent.com/national/ukraine-war-latest-ukraine-conducts-counteroffensive-in-south-east-and-north
+48.738967,37.58435,2022-09-07,Kramatorsk,Donetsk Oblast,UA,blast,ied_score,https://kyivindependent.com/national/survivor-of-russian-strike-on-kramatorsk-train-station-dead-people-were-everywhere
+46.975033,31.994583,2022-09-07,Mykolaiv,Mykolaiv Oblast,UA,land,indirect_fire_score,https://kyivindependent.com/national/in-constantly-shelled-mykolaiv-volunteers-do-not-back-down
+49.9935,36.230383,2022-09-08,Kharkiv,Kharkiv Oblast,UA,targeted,abduction_score,https://kyivindependent.com/national/ukraine-liberates-1-000-square-kilometers-over-20-settlements-in-kharkiv-oblast
+49.9935,36.230383,2022-09-09,Kharkiv,Kharkiv Oblast,UA,land,indirect_fire_score,https://kyivindependent.com/national/kharkiv-shelling-survivor-russia-took-everything-from-me
+49.9935,36.230383,2022-09-10,Kharkiv,Kharkiv Oblast,UA,security,arrest_score,https://kyivindependent.com/national/kupiansk-izium-liberated-as-russian-defenses-collapse-amid-rapid-ukrainian-advance-in-kharkiv-oblast
+49.9935,36.230383,2022-09-12,Kharkiv,Kharkiv Oblast,UA,security,arrest_score,https://kyivindependent.com/national/ukrainians-capture-russian-ammo-weapons-vehicles-in-kharkiv-oblast
+50.4501,30.5234,2022-09-12,Kyiv,Kyiv City,UA,targeted,abduction_score,https://kyivindependent.com/national/russia-past-point-of-no-return-must-be-defeated-ukraine-allies-declare-at-yes-conference-held-in-secrecy-in-kyiv
+49.0186904,37.5063775,2022-09-13,Bohorodychne,Donetsk Oblast,UA,land,indirect_fire_score,https://kyivindependent.com/national/ukraine-war-latest-intelligence-point-to-potential-turning-point-in-war-as-ukraine-liberates-over-300-settlements
+46.635417,32.616867,2022-09-13,Kherson,Kherson Oblast,UA,security,arrest_score,https://kyivindependent.com/national/with-successful-kharkiv-operation-ukraine-turns-the-war-in-its-favor
+49.4643925,36.8584805,2022-09-16,Balakliya,Kharkiv Oblast,UA,targeted,intimidation_score,https://kyivindependent.com/national/police-discover-10-torture-chambers-in-liberated-areas-in-kharkiv-oblast
+48.6765178,38.0990815,2022-09-17,Soledar,Donetsk Oblast,UA,land,indirect_fire_score,https://kyivindependent.com/national/russia-bombards-civilians-in-three-ukrainian-regions-overnight-kills-at-least-two
+47.097133,37.543367,2022-09-17,Mariupol,Donetsk Oblast,UA,targeted,abduction_score,https://kyivindependent.com/national/ukrainians-emerge-from-a-6-month-nightmare-in-newly-liberated-territories
+49.4643925,36.8584805,2022-09-18,Balakliya,Kharkiv Oblast,UA,targeted,abduction_score,https://kyivindependent.com/national/the-town-where-ukraines-kharkiv-offensive-was-started
+46.635417,32.616867,2022-09-18,Kherson,Kherson Oblast,UA,targeted,abduction_score,https://kyivindependent.com/national/ukraine-war-latest-identification-procedures-begin-at-mass-burial-site-in-liberated-izium-as-russias-attacks-intensify-across-ukraine
+48.926456,38.2459006,2022-09-19,Bilohorivka,Luhansk Oblast,UA,targeted,abduction_score,https://kyivindependent.com/national/ukraine-war-latest-russia-attacks-a-nuclear-plant-in-ukraine-as-counteroffensive-reportedly-moves-into-occupied-luhansk-oblast
+48.1031637,38.5920837,2022-09-19,NA,Donbas,UA,land,indirect_fire_score,https://kyivindependent.com/national/retired-us-general-if-russia-used-nuclear-weapon-in-ukraine-us-would-have-to-get-directly-involved
+48.5986674,37.9980367,2022-09-20,Bakhmut,Donetsk Oblast,UA,missile,,https://kyivindependent.com/national/ukraine-war-latest-moscows-proxies-in-4-regions-announce-dates-for-referendums-to-join-russia-ukraine-and-west-denounce-the-plan
+48.1031637,38.5920837,2022-09-23,NA,Donbas,UA,targeted,intimidation_score,https://kyivindependent.com/national/russian-torture-chambers-survivor-every-inch-of-me-was-in-agony
+49.1764561,37.5357771,2022-09-23,Yats'kivka,Donetsk Oblast,UA,targeted,abduction_score,https://kyivindependent.com/national/ukraine-war-latest-staged-secession-voting-begins-in-4-occupied-regions
+46.8550216,35.3586996,2022-09-26,Melitopol',Zaporizhia Oblast,UA,targeted,abduction_score,https://kyivindependent.com/national/ukraine-war-latest-260-000-russians-flee-country-as-putin-attempts-to-mobilize-men-to-fight-ukraine
+49.9935,36.230383,2022-09-27,Kharkiv,Kharkiv Oblast,UA,targeted,abduction_score,https://kyivindependent.com/national/ukraine-war-latest-russia-declares-nearly-100-support-in-sham-annexation-votes
+49.2121445,37.2665006,2022-09-28,Izyum,Kharkiv Oblast,UA,land,indirect_fire_score,https://kyivindependent.com/national/wife-of-izium-mass-grave-victim-learns-of-husbands-death-from-viral-photo
+48.1031637,38.5920837,2022-09-28,NA,Donbas,UA,land,indirect_fire_score,https://kyivindependent.com/national/ukraine-war-latest-kremlins-proxies-in-occupied-territories-ask-to-join-russia-as-ukraine-makes-progress-in-donetsk-oblast
+49.9935,36.230383,2022-09-29,Kharkiv,Kharkiv Oblast,UA,security,arrest_score,https://kyivindependent.com/national/russias-chaotic-mobilization-unlikely-to-change-ukraine-wars-course
+48.015883,37.80285,2022-09-30,Donetsk,Donetsk Oblast,UA,targeted,abduction_score,https://kyivindependent.com/national/russia-annexes-4-ukrainian-oblasts-after-staged-referendums
+48.7388368,36.0162211,2022-10-01,Yur'ivka,Dnipropetrovsk Oblast,UA,air,fixed_wing_score,https://kyivindependent.com/national/father-loses-5-family-members-to-russian-airstrike-they-were-killed-physically-i-was-killed-mentally-with-them
+48.1031637,38.5920837,2022-09-30,NA,Donbas,UA,security,arrest_score,https://kyivindependent.com/national/ukraine-war-latest-russian-strike-kills-30-as-moscow-declares-biggest-land-grab-in-europe-since-world-war-ii
+48.015883,37.80285,2022-10-02,Donetsk,Donetsk Oblast,UA,targeted,abduction_score,https://kyivindependent.com/national/ukraine-war-latest-ukraines-counteroffensive-continues-after-russian-defeat-in-lyman
+48.1031637,38.5920837,2022-10-03,NA,Donbas,UA,targeted,abduction_score,https://kyivindependent.com/national/ukraine-war-latest-ukraine-making-more-gains-in-east-and-south
+48.574041,39.307815,2022-10-05,Luhansk,Luhansk Oblast,UA,security,arrest_score,https://kyivindependent.com/national/russian-forces-cling-to-kherson-against-military-logic-trapped-by-kremlins-annexation-claims
+48.9001251,37.7248512,2022-10-06,Raihorodok,Donetsk Oblast,UA,targeted,abduction_score,https://kyivindependent.com/national/ukraine-war-latest-ukraine-retakes-more-settlements-as-russians-strike-zaporizhzhia-again
+49.0422268,38.2176555,2022-10-07,Kreminna,Luhansk Oblast,UA,air,loitering_munition_score,https://kyivindependent.com/national/ukraine-war-latest-ukrainian-counteroffensive-continues-on-putins-70th-birthday
+47.8388,35.139567,2022-10-09,Zaporizhzhia,Zaporizhia Oblast,UA,blast,uxo_score,https://kyivindependent.com/national/ukraine-war-latest-putin-accuses-ukrainian-intelligence-of-damaging-crimean-bridge
+49.9935,36.230383,2022-10-10,Kharkiv,Kharkiv Oblast,UA,air,loitering_munition_score,https://kyivindependent.com/national/ukraine-racked-by-intense-bombardment-of-cities-energy-infrastructure-and-central-kyiv-among-targets
+50.4501,30.5234,2022-10-10,Kyiv,Kyiv City,UA,blast,ied_score,https://kyivindependent.com/national/flashbacks-of-feb-24-as-russia-strikes-central-kyiv
+47.8388,35.139567,2022-10-11,Zaporizhzhia,Zaporizhia Oblast,UA,targeted,abduction_score,https://kyivindependent.com/national/ukraine-war-latest-russia-again-strikes-ukraines-energy-system
+48.136596,37.7491335,2022-10-12,Avdiivka,Donetsk Oblast,UA,targeted,abduction_score,https://kyivindependent.com/national/ukraine-war-latest-russia-strikes-crowded-market-amid-battlefield-setbacks
+48.5239429,37.7075811,2022-10-13,Kostyantynivka,Donetsk Oblast,UA,targeted,abduction_score,https://kyivindependent.com/national/ukraine-war-latest-russian-led-militants-call-for-evacuation-from-kherson
+49.0440881,37.578484,2022-10-14,Svyatohirs'k,Donetsk Oblast,UA,missile,,https://kyivindependent.com/national/ukraine-war-latest-russia-slowly-advances-in-donetsk-oblast-as-escalation-continues-in-belarus
+50.4501,30.5234,2022-10-17,Kyiv,Kyiv City,UA,air,loitering_munition_score,https://kyivindependent.com/national/russia-launches-first-ever-kamikaze-drone-attack-on-kyiv
+50.4501,30.5234,2022-10-17,Kyiv,Kyiv City,UA,air,loitering_munition_score,https://kyivindependent.com/national/Russia-attacks-Kyiv-with-28-drones
+48.9897585,37.8049964,2022-10-18,Lyman,Donetsk Oblast,UA,air,loitering_munition_score,https://kyivindependent.com/national/ukraine-war-latest-russia-intensifies-attacks-on-ukraines-energy-facilities
+50.4501,30.5234,2022-10-19,Kyiv,Kyiv City,UA,missile,,https://kyivindependent.com/national/Russian-attacks-on-Kyiv-energy-infrastructure-might-cause-problems
+46.635417,32.616867,2022-10-19,Kherson,Kherson Oblast,UA,targeted,abduction_score,https://kyivindependent.com/national/as-ukraine-sets-its-sights-on-liberating-kherson-russian-proxies-try-to-push-people-out
+50.9077,34.7981,2022-10-20,Sumy,Sumy Oblast,UA,targeted,abduction_score,https://kyivindependent.com/national/ukraine-war-latest-zelensky-accuses-russia-of-preparing-to-blow-up-dam-in-kherson-oblast-causing-historic-disaster
+46.635417,32.616867,2022-10-23,Kherson,Kherson Oblast,UA,air,loitering_munition_score,https://kyivindependent.com/national/ukraine-war-latest-pressure-mounts-for-russians-in-kherson-as-ukraine-presses-forward
+46.635417,32.616867,2022-10-24,Kherson,Kherson Oblast,UA,security,arrest_score,https://kyivindependent.com/national/ukraine-war-latest-armed-forces-liberate-4-settlements-in-donbas
+48.0093421,37.5091505,2022-10-25,Krasnohorivka,Donetsk Oblast,UA,land,indirect_fire_score,https://kyivindependent.com/national/ukraine-war-latest-zelensky-makes-new-plea-for-foreign-aid
+48.1031637,38.5920837,2022-10-26,NA,Donbas,UA,land,indirect_fire_score,https://kyivindependent.com/national/as-russia-digs-in-along-donbas-front-line-no-end-in-sight-for-civilian-suffering
+50.4501,30.5234,2022-10-26,Kyiv,Kyiv City,UA,air,rotary_wing_score,https://kyivindependent.com/national/ukrainian-aerospace-company-allegedly-supplied-military-helicopter-parts-to-russia-during-war
+46.482526,30.7233095,2022-10-27,Odesa,Odessa Oblast,UA,security,arrest_score,https://kyivindependent.com/national/ukraine-war-latest-putin-backs-down-on-nuclear-threats-repeats-unproven-claim-about-ukraines-dirty-bomb
+48.5986674,37.9980367,2022-10-31,Bakhmut,Donetsk Oblast,UA,air,loitering_munition_score,https://kyivindependent.com/national/ukraine-war-latest-russia-carries-out-mass-attacks-on-ukraines-energy-sites-causing-power-water-outages
+48.1031637,38.5920837,2022-11-01,NA,Donbas,UA,land,indirect_fire_score,https://kyivindependent.com/national/sviatohirsk
+46.635417,32.616867,2022-11-01,Kherson,Kherson Oblast,UA,targeted,abduction_score,https://kyivindependent.com/national/ukraine-war-latest-russian-proxies-intensify-deportation-campaign-in-kherson-oblast
+48.1031637,38.5920837,2022-11-02,NA,Donbas,UA,security,arrest_score,https://kyivindependent.com/national/konrad-muzyka-russian-military-in-belarus-within-range-of-ukrainian-artillery-systems
+48.015883,37.80285,2022-11-03,Donetsk,Donetsk Oblast,UA,security,arrest_score,https://kyivindependent.com/national/ukraine-war-latest-iaea-finds-no-evidence-that-proves-russias-dirty-bomb-accusations
+47.097133,37.543367,2022-11-08,Mariupol,Donetsk Oblast,UA,targeted,abduction_score,https://kyivindependent.com/national/ukraine-war-latest-zelensky-to-speak-at-g-20-meeting-as-west-encourages-peace-talks-with-russia
+47.07537,32.8061775,2022-11-09,Snihurivka,Mykolaiv Oblast,UA,targeted,abduction_score,https://kyivindependent.com/national/ukrainian-troops-reportedly-enter-snihurivka-as-russia-prepares-to-retreat-from-kherson
+46.975033,31.994583,2022-11-09,Mykolaiv,Mykolaiv Oblast,UA,land,indirect_fire_score,https://kyivindependent.com/national/voices-from-the-trenches-ukrainian-soldiers-near-kherson-share-what-they-feel-and-fear
+48.015883,37.80285,2022-11-09,Donetsk,Donetsk Oblast,UA,air,fixed_wing_score,https://kyivindependent.com/national/ukraine-war-latest-russia-orders-withdrawal-from-kherson-ukraine-doesnt-confirm-yet
+46.635417,32.616867,2022-11-10,Kherson,Kherson Oblast,UA,security,arrest_score,https://kyivindependent.com/national/ukraine-war-latest-ukraine-advances-7-kilometers-in-kherson-direction-liberates-12-nearby-settlements
+49.233083,28.468217,2022-11-11,Vinnytsia,Vinnytsia Oblast,UA,land,indirect_fire_score,https://kyivindependent.com/national/ukraine-war-latest-historic-day-says-zelensky-as-armed-forces-enter-kherson
+47.0052788,33.7289334,2022-11-13,Hornostaivka,Kherson Oblast,UA,security,arrest_score,https://kyivindependent.com/national/ukraine-war-latest-russians-mined-nearly-everything-in-now-liberated-kherson-says-governor
+46.635417,32.616867,2022-11-14,Kherson,Kherson Oblast,UA,blast,landmine_score,https://kyivindependent.com/national/ukraine-war-latest-zelensky-in-liberated-kherson-says-we-are-ready-for-peace-a-peace-for-all-of-ukraine
+50.4198006,30.560858,2022-11-15,Kyiv,Kyiv City,UA,missile,,https://kyivindependent.com/national/ukraine-war-latest-russia-fires-90-missiles-at-ukraine-damages-15-energy-sites-nationwide
+46.635417,32.616867,2022-11-17,Kherson,Kherson Oblast,UA,targeted,abduction_score,https://kyivindependent.com/national/tortured-khersonians-speak-of-russias-crimes
+50.4501,30.5234,2022-11-18,Kyiv,Kyiv City,UA,land,indirect_fire_score,https://kyivindependent.com/national/ukraine-war-latest-half-of-ukraines-energy-system-disabled-says-pm
+48.6765178,38.0990815,2022-11-20,Soledar,Donetsk Oblast,UA,security,exchange_score,https://kyivindependent.com/national/ukraine-war-latest-kremlin-accuses-ukraine-of-executing-po-ws-kyiv-denies-says-it-will-investigate
+46.635417,32.616867,2022-11-22,Kherson,Kherson Oblast,UA,targeted,intimidation_score,https://kyivindependent.com/national/inside-one-of-russias-torture-chambers-in-occupied-kherson-photos
+50.4501,30.5234,2022-11-23,Kyiv,Kyiv City,UA,missile,,https://kyivindependent.com/national/russia-launches-new-wave-of-missile-strikes-across-ukraine
+50.5831258,30.4856784,2022-11-23,Vyshhorod,Kyiv Oblast,UA,blast,ied_score,https://kyivindependent.com/national/deadly-attack-on-vyshhorod-residence-i-dont-have-a-home-anymore
+50.5831258,30.4856784,2022-11-24,Vyshhorod,Kyiv Oblast,UA,security,exchange_score,https://kyivindependent.com/national/ukraine-war-latest-millions-still-without-electricity-after-russias-nov-23-mass-strikes
+47.097133,37.543367,2022-11-26,Mariupol,Donetsk Oblast,UA,targeted,abduction_score,https://kyivindependent.com/national/empty-kherson-art-museum-in-despair-after-entire-collection-stolen-by-russia
+48.1031637,38.5920837,2022-11-27,NA,Donbas,UA,security,arrest_score,https://kyivindependent.com/national/pregnant-medic-spent-5-months-in-russian-captivity-i-feared-they-would-take-my-child-away
+48.5986674,37.9980367,2022-11-27,Bakhmut,Donetsk Oblast,UA,land,indirect_fire_score,https://kyivindependent.com/national/ukraine-war-latest-russia-ramps-up-attacks-on-kherson-uses-terror-tactics-against-civilians

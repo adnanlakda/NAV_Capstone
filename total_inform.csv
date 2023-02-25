@@ -1,0 +1,6 @@
+Latitude,Longitude,Date,Town,Oblast,Country,Incident_type,Incident_sub_type,Source_1
+48.574041,39.307815,None,Luhansk,Luhansk Oblast,UA,security,arrest_score,https://www.ukrinform.net/rubric-defense/3184226-ambassador-grau-calls-for-simultaneous-opening-of-shchastia-and-zolote-crossing-points.html
+48.1031637,38.5920837,None,,Donbas,UA,security,arrest_score,https://www.ukrinform.net/rubric-polytics/3185173-russian-president-sergey-naryshkin-or-child-of-warring-russian-secret-services.html
+48.1031637,38.5920837,None,,Donbas,UA,security,arrest_score,https://www.ukrinform.net/rubric-polytics/3183884-publication.html
+48.1031637,38.5920837,None,,Donbas,UA,air,surface_to_air_score,https://www.ukrinform.net/rubric-polytics/3186312-mh17-case-the-netherlands-will-not-hold-ukraine-accountable-for-decision-not-to-close-airspace-over-donbas.html
+48.1031637,38.5920837,None,,Donbas,UA,air,fixed_wing_score,https://www.ukrinform.net/rubric-polytics/3182109-mh17-trial-experts-to-be-interrogated-before-consideration-of-merits-starts.html

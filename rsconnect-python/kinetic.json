@@ -1,0 +1,11 @@
+{
+    "https://api.shinyapps.io": {
+        "server_url": "https://api.shinyapps.io",
+        "filename": "C:\\users\\Zach\\documents\\capstone_project\\kinetic",
+        "app_url": "https://zach-drex.shinyapps.io/kinetic/",
+        "app_id": 7776749,
+        "app_guid": null,
+        "title": "kinetic",
+        "app_mode": "python-shiny"
+    }
+}
