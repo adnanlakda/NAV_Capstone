@@ -17,6 +17,7 @@
 * Annotate code:
   * Add official doc strings to modules, classes, and functions
   * Add in line comments to other parts of code
+* Figure out a way to test simpler runs that don't take so long.
 * Make code more robust to failures with try/except logic
 * Reduce code repetition by creating functions and external files for key words, etc.
 * Add logging and messages so you know what is happening in the code while it is running
