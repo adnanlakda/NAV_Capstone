@@ -19,7 +19,7 @@
   * Add in line comments to other parts of code
 * Make code more robust to failures with try/except logic
 * Reduce code repetition by creating functions and external files for key words, etc.
-* Add logging and messages so you know what is happening in the code
+* Add logging and messages so you know what is happening in the code while it is running
 
 #### 4. Add Twitter API branch
 * Sign up for Twitter API
@@ -27,7 +27,7 @@
 
 #### 5. Improve Usability
 * Improve non-technical user documentation and instructions
-* Test until the programs runs or fails gracefully in all reasonable scenarios
+* Test until the program runs or fails gracefully in all reasonable scenarios
 
 
 
