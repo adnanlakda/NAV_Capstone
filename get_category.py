@@ -1,3 +1,6 @@
+# TODO: Add doc string to describe module
+# TODO: add comments throughout file to describe what it does
+
 import spacy
 from spacy import displacy 
 from spacy.lang.en.stop_words import STOP_WORDS

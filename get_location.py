@@ -1,3 +1,6 @@
+# TODO: Add doc string to describe module
+# TODO: add comments throughout file to describe what it does
+
 from newspaper import Article
 from newspaper import Config
 import newspaper
