@@ -35,24 +35,23 @@
 └── total_pravda.csv
 
 ```
-
-
 - [ ] Create diagram of how app functions and code works together
 - [ ] Create technical instructions for future groups 
 
 #### 3. Improve existing code
 - [ ] Annotate code:
-  - [ ] Add official doc strings to modules, classes, and functions
+  - [ ] Add official doc strings to modules, classes, and functions: https://sphinx-rtd-tutorial.readthedocs.io/en/latest/docstrings.html
   - [ ] Add in line comments to other parts of code
 - [ ] Figure out a way to test simpler runs that don't take so long.
 - [ ] Make code more robust to failures with try/except logic
 - [ ] Reduce code repetition by creating functions and external files for key words, etc.
-- [ ] Add logging and messages so you know what is happening in the code while it is running
-- [ ] Reduce requirements.txt
+- [ ] **(optional)** Add logging and messages so you know what is happening in the code while it is running
+- [ ] **(optional)** Reduce requirements.txt
 
-#### 4. Add Twitter API branch
-- [ ] Sign up for Twitter API
-- [ ] Add branch for Twitter in Shiny UI and `app.py`
+#### 4. Add API branch
+- [ ] Sign up for some free API (Google news?)
+- [ ] Add branch for social in Shiny UI and `app.py`
+- [ ] **(optional)** Twitter?
 
 #### 5. Improve Usability
 - [ ] Improve non-technical user documentation and instructions
