@@ -7,8 +7,8 @@
 - [ ] Learn how to use git from command line
 
 #### 2. Improve GitHub
-- [ ] Determine what files are needed in GitHub
-  - [ ] Remove unneeded files
+- [x] Determine what files are needed in GitHub
+  - [x] Remove unneeded files
 - [ ] Create listing of files with descriptions
 - [ ] Create diagram of how app functions and code works together
 - [ ] Create technical instructions for future groups 
