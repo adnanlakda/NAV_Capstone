@@ -10,6 +10,33 @@
 - [x] Determine what files are needed in GitHub
   - [x] Remove unneeded files
 - [ ] Create listing of files with descriptions
+
+```
+.
+├── .gitignore
+├── README.md
+├── app.py: main driver application
+├── final_df.csv: ? 
+├── get_category.py: logic for assigning category scores
+├── get_date.py: logic for assigning dates
+├── get_location.py: logic for assigning locations
+├── get_sub_category.py: logic for assigning sub-category scores
+├── kws.csv
+├── manifest.json
+├── master_urls_independent.csv
+├── master_urls_inform.csv
+├── master_urls_inform.xlsx
+├── requirements.txt
+├── rsconnect-python
+│   └── kinetic.json
+├── sub_kws.csv
+├── total_independent.csv
+├── total_inform.csv
+└── total_pravda.csv
+
+```
+
+
 - [ ] Create diagram of how app functions and code works together
 - [ ] Create technical instructions for future groups 
 
