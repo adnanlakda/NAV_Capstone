@@ -21,6 +21,7 @@
 * Make code more robust to failures with try/except logic
 * Reduce code repetition by creating functions and external files for key words, etc.
 * Add logging and messages so you know what is happening in the code while it is running
+* Reduce requirements.txt
 
 #### 4. Add Twitter API branch
 * Sign up for Twitter API
