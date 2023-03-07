@@ -18,9 +18,9 @@ import numpy as np
 import os
 import sys
 
-file_choices = {"yes_use_file" : "Yes", "no_use_file" : "No"} # TODO: what is this important setting used for?
+file_choices = {"yes_use_file" : "Yes", "no_use_file" : "No"} # TODO: defines the buttons yes and no in the shiny app
 
-# defines basic app UI ########################################################
+# defines basic app UI and what you will see in the shiny app ########################################################
 
 app_ui = ui.page_fluid(
     #ui.input_file("original_excel", "Upload excel", accept=".xlsx"),
@@ -73,7 +73,7 @@ def server(input, output, session):
         :return: No explicit return. Sub-functions return various Pandas dataframes. 
     
     """
-
+######### WHAT IS THIS ?###########
     @output
     @render.table
     @reactive.event(input.start)
@@ -94,27 +94,27 @@ def server(input, output, session):
                 # determine treemap of website urls ###########################
                 # TODO: what if this fails, can the code be made more robust here?
                 # try/except logic? probably just exit gracefully
-                existings_urls_file = Path(__file__).parent / "master_urls_independent.csv" # TODO: file with existing URLs -- does it exist, is it accurate?
+                existings_urls_file = Path(__file__).parent / "master_urls_independent.csv" # TODO: file with existing URLs -- does it exist - yes, is it accurate - yes (could be better)?
                 #kw_file = Path(__file__).parent / "kws.csv"
                 #subkw_file = Path(__file__).parent / "sub_kws.csv"
                 existing_df = pd.read_csv(existings_urls_file)
                 existing_urls = existing_df['url'].to_list()
-                existing_urls = [*set(existing_urls)]
+                existing_urls = [*set(existing_urls)] ### removes duplicates from list of existing urls by using the set(), then save them back as a list
                 tree = sitemap_tree_for_homepage('https://kyivindependent.com/');
-                urls = [page.url for page in tree.all_pages()];
-                urls = [*set(urls)]
+                urls = [page.url for page in tree.all_pages()]; # pulling the urls from the sitemap
+                urls = [*set(urls)] ### removes duplicates from urls from sitemap by using the set(), then save them back as a list
                 
                 # define dataframe for storing gathered urls ##################
                 # check against existing urls and eliminate them to save time when scraping below
                 # TODO: what if this fails, can the code be made more robust here?
                 # try/except logic? fall back to full scrape if this fails?
-                df = pd.DataFrame(urls)
-                df = df.rename(columns={0: 'url'})
-                df.to_csv('master_urls_independent.csv', index=False)
-                df['title'] = ''
-                df['text'] = ''
-                df['incident_type'] = ''
-                df = df[~df["url"].isin(existing_urls)] # remove previously scraped sites from list
+                df = pd.DataFrame(urls) ## urls just pulled from webiste into a new dataframe
+                df = df.rename(columns={0: 'url'}) # renaming column 0 to "url"
+                df.to_csv('master_urls_independent.csv', index=False) #  overwriting the master_urls_independent.csv file from this data frame to save scraped urls from sitemap
+                df['title'] = '' ## addiing column to dataframe 
+                df['text'] = '' # adding column to data frame
+                df['incident_type'] = '' # adding column to data frame
+                df = df[~df["url"].isin(existing_urls)] # remove previously scraped sites from existing url list in this dataframe
 
                 # TODO: determine if this code block is needed
                 #df = df[df["url"].str.contains("/national/")==True]
@@ -777,7 +777,7 @@ def server(input, output, session):
                 # TODO: why? what does it do?
                 df = df[df["url"].str.contains("/eng/")==True]
                 df = df[df["url"].str.contains("/news/")==True]
-                df = df[(df["url"].str.contains("2022")==True) | (df["url"].str.contains("2023")==True)]
+                df = df[(df["url"].str.contains("2023")==True)]
 
 
 				# for each new url scrape using beautiful soup ################
