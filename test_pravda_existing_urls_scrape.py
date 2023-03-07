@@ -126,7 +126,7 @@ for index, row in tqdm(df.iterrows(), desc="Loading..."):
         #row[4] = np.float64(category_info[1])
     except Exception as e:
         print(e)
-        row[3] = 'none'
+        row[3] = 'none' # failed top retrieve this
 
 df = df[df["incident_type"].str.contains("none")==False]
 df['sub_category'] = ' '
