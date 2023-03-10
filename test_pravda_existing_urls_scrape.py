@@ -17,6 +17,8 @@ from get_date import *
 import numpy as np
 import os
 import sys
+import nltk
+
 
 # download text preprocessing information 
 
@@ -39,13 +41,17 @@ print(existing_urls[0:1])
 tree = sitemap_tree_for_homepage('https://www.pravda.com.ua/'); ##### TAKES FOREVER
 urls = [page.url for page in tree.all_pages()];
 urls = [*set(urls)]
+print(urls[0:9])
 
 # define dataframe for storing gathered urls ##################
 # TODO: what if this fails, can the code be made more robust here?
 # try/except logic? fall back to full scrape if this fails?
 df = pd.DataFrame(urls)
 df = df.rename(columns={0: 'url'})
-df.to_csv('master_urls_pravda.csv', index=False)
+print(df[0:1])
+print(df[1100:1161])
+#df.to_csv('master_urls_pravda.csv', index = False, header = True) 
+# # TODO ERROR TypeError: __init__() got an unexpected keyword argument 'line_terminator'
 df['title'] = ''
 df['text'] = ''
 df['incident_type'] = ''
@@ -54,8 +60,11 @@ df = df[~df["url"].isin(existing_urls)] # remove previously scraped sites from l
 
 # TODO: why? what does it do?
 df = df[df["url"].str.contains("/eng/")==True]
-df = df[df["url"].str.contains("/news/")==True]
+print(df)
+df = df[df["url"].str.contains("/news/")==True] # removes urls from the df that have /news/ in their url
+print(df)
 df = df[(df["url"].str.contains("2023")==True)]
+df.head() ## 
 
 
 # for each new url scrape using beautiful soup ################
@@ -72,10 +81,14 @@ for index, row in tqdm(df.iterrows(), desc="Loading..."):
     soup = BeautifulSoup(html_page, 'html.parser')
     for title in soup.find_all('h1', attrs={"class":"post_title"}):
         title_text = (title.get_text())
-        row[1] = title_text
+        row[1] += title_text
     for para in soup.find_all('div', attrs={"class":"post_text"}):
         para_text = (para.get_text())
         row[2] += para_text
+
+print(df['title'])
+print(df['text'])
+print(df['incident_type'])
 
 # use regular expressions to extract key words from scraped text 
 # TODO: likely move to an external file so it's easier to add new or remove stale
@@ -110,7 +123,15 @@ df = df[df["title"].str.contains("How")==False]
 df = df[df["title"].str.contains("Analysts")==False]
 df = df[df["title"].str.contains("visits")==False]
 
-nlp = spacy.load('en_core_web_sm') # TODO: why, what does it do?
+print(df['title'])
+print(df['text'])
+print(df['incident_type'])
+
+#nlp = spacy.load('en_core_web_sm') # TODO: why, what does it do? we don't call this
+#### This code loads a pre-trained statistical model for English language processing from 
+# the spaCy library. The en_core_web_sm model is a small, but effective, model for processing
+#  English text data that includes tokenization, named entity recognition, part-of-speech tagging, 
+# and dependency parsing.
 
 # attempt to determine category ###############################
 # this can fail, and when it does you might see "Divide  by zero" in the log
@@ -127,9 +148,13 @@ for index, row in tqdm(df.iterrows(), desc="Loading..."):
     except Exception as e:
         print(e)
         row[3] = 'none' # failed top retrieve this
+print(df['incident_type'])
+df.loc[df['incident_type'] == 'none'] ## march 10th: 69 rows are not categorized -- can improve
 
-df = df[df["incident_type"].str.contains("none")==False]
-df['sub_category'] = ' '
+df = df[df["incident_type"].str.contains("none")==False] # removing all of the incidents with "none"
+print(df)
+df['sub_category'] = ' ' ## adding the column subcategory to the df
+print(df['sub_category']) 
 
 for index, row in tqdm(df.iterrows(), desc="Loading..."):
     main_category = row[3]
@@ -142,13 +167,14 @@ for index, row in tqdm(df.iterrows(), desc="Loading..."):
         #row[4] = np.float64(category_info[1])
     #except:
         #row[4] = 'none'
+print(df['sub_category']) ## updated subcategory 
 
 # attempt to determine location ###############################
 # can this fail? probably ... 
 # TODO: try/except?
 # what should the value be in the dataframe if this fails?
 df['Latitude'] = 1.12
-df['Longitude'] = 1.12
+df['Longitude'] = 1.12 ### why is this defined?
 df['Date'] = ''
 df['City'] = ''
 df['Oblast'] = ''
@@ -166,6 +192,8 @@ applied_df = df.apply(lambda row: pd.Series(get_location(row.url, row.title)), a
 # TODO: try/except?
 # what should the value be in the dataframe if this fails?
 df['Date'] = df['url'].apply(get_date)
+print(df["Date"])
+df.to_excel("march10_pravda.xlsx",sheet_name="Pravda_Scraped")
 
 # create final polished for download ##########################
 final_df = pd.DataFrame()
