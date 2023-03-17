@@ -9,7 +9,7 @@
 #### 2. Improve GitHub
 - [x] Determine what files are needed in GitHub
   - [x] Remove unneeded files
-- [ ] Create listing of files with descriptions
+- [x] Create listing of files with descriptions
 
 ```
 .
