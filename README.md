@@ -49,7 +49,7 @@
 - [ ] **(optional)** Reduce requirements.txt
 
 #### 4. Add API branch
-- [ ] Sign up for some free API (Google news?)
+- [ ] Sign up for Mediastack API 
 - [ ] Add branch for social in Shiny UI and `app.py`
 - [ ] **(optional)** Twitter?
 
