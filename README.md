@@ -21,15 +21,15 @@
 ├── get_date.py: logic for assigning dates
 ├── get_location.py: logic for assigning locations
 ├── get_sub_category.py: logic for assigning sub-category scores
-├── kws.csv
-├── manifest.json
-├── master_urls_independent.csv
-├── master_urls_inform.csv
-├── master_urls_inform.xlsx
+├── kws.csv: keywords categories list along with its assigned scores
+├── manifest.json: information about the application, its dependencies, and associated files
+├── master_urls_independent.csv:
+├── master_urls_inform.csv:
+├── master_urls_inform.xlsx: 
 ├── requirements.txt
 ├── rsconnect-python
 │   └── kinetic.json
-├── sub_kws.csv
+├── sub_kws.csv: sub-category keywords list along with its assigned scores
 ├── total_independent.csv
 ├── total_inform.csv
 └── total_pravda.csv
