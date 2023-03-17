@@ -16,7 +16,7 @@
 ├── .gitignore
 ├── README.md
 ├── app.py: main driver application
-├── final_df.csv: ? 
+├── final_df.csv: final output of the model combining all the websites scraped 
 ├── get_category.py: logic for assigning category scores
 ├── get_date.py: logic for assigning dates
 ├── get_location.py: logic for assigning locations
@@ -30,9 +30,9 @@
 ├── rsconnect-python
 │   └── kinetic.json
 ├── sub_kws.csv: sub-category keywords list along with its assigned scores
-├── total_independent.csv
-├── total_inform.csv
-└── total_pravda.csv
+├── total_independent.csv: model output for this website scraped.
+├── total_inform.csv: model output for this website scraped.
+└── total_pravda.csv: model output for this website scraped.
 
 ```
 - [ ] Create diagram of how app functions and code works together
