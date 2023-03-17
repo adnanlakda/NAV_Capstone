@@ -26,7 +26,7 @@
 ├── master_urls_independent.csv:
 ├── master_urls_inform.csv:
 ├── master_urls_inform.xlsx: 
-├── requirements.txt
+├── requirements.txt: information about all the libraries, modules, and packages
 ├── rsconnect-python
 │   └── kinetic.json
 ├── sub_kws.csv: sub-category keywords list along with its assigned scores
