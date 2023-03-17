@@ -28,7 +28,7 @@
 ├── master_urls_inform.xlsx: 
 ├── requirements.txt: information about all the libraries, modules, and packages
 ├── rsconnect-python
-│   └── kinetic.json
+│   └── kinetic.json: contains information about a Shiny app
 ├── sub_kws.csv: sub-category keywords list along with its assigned scores
 ├── total_independent.csv: model output for this website scraped.
 ├── total_inform.csv: model output for this website scraped.
