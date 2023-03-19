@@ -35,7 +35,7 @@
 └── total_pravda.csv: model output for this website scraped.
 
 ```
-- [ ] Create diagram of how app functions and code works together
+- [x] Create diagram of how app functions and code works together
 
 
   ![Dataset](model.png) 
@@ -54,7 +54,7 @@
 - [ ] **(optional)** Reduce requirements.txt
 
 #### 4. Add API branch
-- [ ] Sign up for Mediastack API 
+- [x] Sign up for Mediastack API 
 - [ ] Add branch for social in Shiny UI and `app.py`
 - [ ] **(optional)** Twitter?
 
