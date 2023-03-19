@@ -30,9 +30,9 @@
 ├── rsconnect-python
 │   └── kinetic.json: contains information about a Shiny app
 ├── sub_kws.csv: sub-category keywords list along with its assigned scores
-├── total_independent.csv: model output for this website scraped.
-├── total_inform.csv: model output for this website scraped.
-└── total_pravda.csv: model output for this website scraped.
+├── total_independent.csv: model output for Kyiv Independent website scraped.
+├── total_inform.csv: model output for Ukrinform website scraped.
+└── total_pravda.csv: model output for Ukrainska Pravada website scraped.
 
 ```
 - [x] Create diagram of how app functions and code works together
