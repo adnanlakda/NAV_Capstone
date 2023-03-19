@@ -36,6 +36,11 @@
 
 ```
 - [ ] Create diagram of how app functions and code works together
+
+
+  ![Dataset](model.png) 
+
+
 - [ ] Create technical instructions for future groups 
 
 #### 3. Improve existing code
