@@ -23,16 +23,16 @@
 ├── get_sub_category.py: logic for assigning sub-category scores
 ├── kws.csv: keywords categories list along with its assigned scores
 ├── manifest.json: information about the application, its dependencies, and associated files
-├── master_urls_independent.csv: list of urls scraped for this website.
-├── master_urls_inform.csv: list of urls scraped for this website.
-├── master_urls_inform.xlsx: list of urls scraped for this website.
+├── master_urls_independent.csv: list of urls scraped for this website
+├── master_urls_inform.csv: list of urls scraped for this website
+├── master_urls_inform.xlsx: list of urls scraped for this website
 ├── requirements.txt: information about all the libraries, modules, and packages
 ├── rsconnect-python
 │   └── kinetic.json: contains information about a Shiny app
 ├── sub_kws.csv: sub-category keywords list along with its assigned scores
-├── total_independent.csv: model output for Kyiv Independent website scraped.
-├── total_inform.csv: model output for Ukrinform website scraped.
-└── total_pravda.csv: model output for Ukrainska Pravada website scraped.
+├── total_independent.csv: model output for Kyiv Independent website scraped
+├── total_inform.csv: model output for Ukrinform website scraped
+└── total_pravda.csv: model output for Ukrainska Pravada website scraped
 
 ```
 - [x] Create diagram of how app functions and code works together
