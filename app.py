@@ -699,8 +699,8 @@ def server(input, output, session):
                 # can this fail? probably ... 
                 # TODO: try/except?
                 # what should the value be in the dataframe if this fails?
-                df['Latitude'] = 1.12 ### 1.12 is a filler value if latitude is not defined
-                df['Longitude'] = 1.12 ### 1.12 is a filler value if longitude is not defined # should we add try/except logic?
+                df['Latitude'] = 11.10 ### 1.12 is a filler value if latitude is not defined
+                df['Longitude'] = 11.10 ### 1.12 is a filler value if longitude is not defined # should we add try/except logic?
                 df['Date'] = ''
                 df['City'] = ''
                 df['Oblast'] = ''
