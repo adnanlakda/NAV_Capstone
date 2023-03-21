@@ -19,7 +19,6 @@ security_df = sub_kws[sub_kws["main_category"].str.contains("security")==True]
 targeted_df = sub_kws[sub_kws["main_category"].str.contains("targeted")==True]
 
 
-
 def get_sub_category(main_category, title, text):
 
     indexed_df = air_df
