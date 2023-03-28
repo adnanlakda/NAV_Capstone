@@ -26,7 +26,7 @@ nltk.download('punkt')
 nltk.download('averaged_perceptron_tagger')
 nltk.download('maxent_ne_chunker')
 nltk.download('words')
-
+def(get_pravda)
 # determine treemap of website urls ###########################
 # TODO: what if this fails, can the code be made more robust here?
 # try/except logic? probably just exit gracefully
@@ -195,7 +195,7 @@ df['Country'] = ''
 # what should the value be in the dataframe if this fails?
 df['Date'] = df['url'].apply(get_date)
 print(df["Date"])
-df.to_excel("march22_pravda.xlsx",sheet_name="Pravda_Scraped")
+df.to_excel("pravda.xlsx",sheet_name="Pravda_Scraped")
 print(df)
 
 
