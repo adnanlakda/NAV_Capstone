@@ -1,3 +1,0 @@
-allennlp evaluate \
-        https://storage.googleapis.com/allennlp-public-models/ner-elmo.2021-02-12.tar.gz \
-        path/to/dataset
