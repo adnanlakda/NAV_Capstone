@@ -1,3 +1,5 @@
+#!/usr/bin/python
+import spacy
 from shiny import App, render, ui, reactive
 import pandas as pd
 from pathlib import Path
@@ -18,6 +20,7 @@ import numpy as np
 import os
 import sys
 import nltk
+import pandas as pd
 
 
 # download text preprocessing information 
@@ -26,7 +29,7 @@ nltk.download('punkt')
 nltk.download('averaged_perceptron_tagger')
 nltk.download('maxent_ne_chunker')
 nltk.download('words')
-def(get_pravda)
+#def(get_pravda)
 # determine treemap of website urls ###########################
 # TODO: what if this fails, can the code be made more robust here?
 # try/except logic? probably just exit gracefully
