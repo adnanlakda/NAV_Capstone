@@ -186,7 +186,7 @@ df['Country'] = ''
 # what should the value be in the dataframe if this fails?
 
 #### This is where we call the get_location function to get lat/long, oblast, city, country info
-# applied_df = df.apply(lambda row: pd.Series(get_location(row.url, row.title)), axis=1, result_type='expand') ## Error?
+applied_df = df.apply(lambda row: pd.Series(get_location(row.url, row.title)), axis=1, result_type='expand') ## Error?
 # if error, why? make more robust
 
 # attempt to determine date ###################################

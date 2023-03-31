@@ -548,7 +548,7 @@ def server(input, output, session):
                 df['Oblast'] = ''
                 df['Country'] = ''
 
-                # call out to get_location module
+                # call out to get module
                 # can this fail? probably ... 
                 # TODO: try/except?
                 # what should the value be in the dataframe if this fails?
