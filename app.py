@@ -548,10 +548,11 @@ def server(input, output, session):
                 df['Oblast'] = ''
                 df['Country'] = ''
 
-                # call out to get_location module
+                # call out to get module
                 # can this fail? probably ... 
                 # TODO: try/except?
                 # what should the value be in the dataframe if this fails?
+                #### Model breaks at line 556 #####
                 applied_df = df.apply(lambda row: pd.Series(get_location(row.url, row.title)), axis=1, result_type='expand')
                 print(applied_df) #empty? if so, make more robust
 

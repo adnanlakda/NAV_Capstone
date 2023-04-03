@@ -1,3 +1,5 @@
+#!/usr/bin/python
+import spacy
 from shiny import App, render, ui, reactive
 import pandas as pd
 from pathlib import Path
@@ -18,6 +20,7 @@ import numpy as np
 import os
 import sys
 import nltk
+import pandas as pd
 
 
 # download text preprocessing information 
@@ -26,7 +29,7 @@ nltk.download('punkt')
 nltk.download('averaged_perceptron_tagger')
 nltk.download('maxent_ne_chunker')
 nltk.download('words')
-
+#def(get_pravda)
 # determine treemap of website urls ###########################
 # TODO: what if this fails, can the code be made more robust here?
 # try/except logic? probably just exit gracefully
@@ -184,6 +187,8 @@ df['Country'] = ''
 # can this fail? probably ... 
 # TODO: try/except?
 # what should the value be in the dataframe if this fails?
+
+#### This is where we call the get_location function to get lat/long, oblast, city, country info
 applied_df = df.apply(lambda row: pd.Series(get_location(row.url, row.title)), axis=1, result_type='expand') ## Error?
 # if error, why? make more robust
 
@@ -193,8 +198,11 @@ applied_df = df.apply(lambda row: pd.Series(get_location(row.url, row.title)), a
 # what should the value be in the dataframe if this fails?
 df['Date'] = df['url'].apply(get_date)
 print(df["Date"])
-df.to_excel("march10_pravda.xlsx",sheet_name="Pravda_Scraped")
+df.to_excel("pravda.xlsx",sheet_name="Pravda_Scraped")
+print(df)
 
+
+#### DID NOT RUN AFTER THIS #####
 # create final polished for download ##########################
 final_df = pd.DataFrame()
 final_df['Latitude'] = applied_df[0]
@@ -217,4 +225,4 @@ total = total.drop_duplicates()
 total.to_csv('total_pravda.csv', index=False) # always downloads?
 print(df)
 print(final_df) # return df with category, date, and location information
-
+print(1)
