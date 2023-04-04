@@ -12,7 +12,6 @@ from bs4 import BeautifulSoup
 from get_category import *
 from get_sub_category import *
 from get_location import *
-from get_date import *
 
 import numpy as np
 import os
