@@ -2,24 +2,18 @@
 #pip install waiter
 #shiny run --reload
 from doctest import OutputChecker
-from shiny import App, render, ui, reactive
+from shiny import ui, render, App
 import http.client, urllib.parse
 import json
 import pandas as pd
-from waiter import wait
 
-waiting_screen <- taglist(
-    spin_flower(),
-    h4("Text being generated...")
-)
+from shiny import App, ui
 
 app_ui = ui.page_fluid(
-    useWaiter(),
-    #ui.input_file("original_excel", "Upload excel", accept=".xlsx"),
     ui.layout_sidebar(
         ui.panel_sidebar(
             #ui.input_select("website", "Choose a website:", {"independent" : "Kyiv Independent", "inform":"UKInform", "pravda":"Pravda", "[website_name]":"website_name"}),
-            ui.input_select("website", "Choose a website:", {"API" : "Mediastack", "inform":"UKInform", "pravda":"Pravda"}),
+            ui.input_select("website", "Choose a website:", {"API" : "Mediastack", "pravda":"Pravda"}),
             ui.input_radio_buttons("use_file", "Use pre-existing data?", file_choices),
             ui.input_action_button("start", "Start"),
             ui.download_button("download_final", "Download", class_="btn-primary")
@@ -29,39 +23,19 @@ app_ui = ui.page_fluid(
             ui.output_table("scrape")
         )
     )
-    #ui.output_table("table")
 )
 
-server = function(input, output) {
-    observeEvent(input$submit, {
-        if (input$api_key == ""){
-            showModel(modalDialog(title = "Error", "Please enter your API key then submit."))
-        }else{
-            waiter_show(html = waiting_screen, color = "black")
-            # set up the API request
-            import http.client, urllib.parse
-            rs <- http.client.HTTPConnection('api.mediastack.com')
-
-            # display the response to the user
-            output$api_response <- renderText({
-                rs$choices$text
-            })
-            waiter_hide()
-
-        }
-    }) 
+def server(input, output, session):
+    scrape_mediastack <- function(){
+        base_url <- "http://api.mediastack.com/v1/news"
+        params <- list(
+            access_key = "d9babc2a947d03f9b887715a6df56a7a",
+            categories = "general",
+            keywords = "Ukraine Russian",
+            languages = "ar,en,fr,ru,zh",
+            sort = "published_desc",
+            limit = 10
+        )
     }
 
-
-
-
-
-
-
-
-# run the shiny app -> will pop up interface
-#shinyApp(ui=app_ui, server=server)
-app = App(app_ui, server, debug=False)
-
-def new_func(input):
-    if input.website() == 'API':pp = App(app_ui, server, debug=False)
+app = App(app_ui, server)
