@@ -22,9 +22,7 @@ import sys
 import nltk
 import pandas as pd
 
-
 # download text preprocessing information 
-
 nltk.download('punkt')
 nltk.download('averaged_perceptron_tagger')
 nltk.download('maxent_ne_chunker')
@@ -143,7 +141,6 @@ print(df['incident_type'])
 for index, row in tqdm(df.iterrows(), desc="Loading..."):
     title = row[1]
     text = row[2]
-    
     try:   
         category_info = get_category(title, text)
         row[3] = category_info[0]
@@ -154,8 +151,9 @@ for index, row in tqdm(df.iterrows(), desc="Loading..."):
 print(df['incident_type'])
 df.loc[df['incident_type'] == 'none'] ## march 10th: 69 rows are not categorized -- can improve
 
+
 df = df[df["incident_type"].str.contains("none")==False] # removing all of the incidents with "none"
-print(df)
+print(df)#then we have around 30% left (4/4/2023)
 df['sub_category'] = ' ' ## adding the column subcategory to the df
 print(df['sub_category']) 
 
@@ -163,7 +161,6 @@ for index, row in tqdm(df.iterrows(), desc="Loading..."):
     main_category = row[3]
     title = row[1]
     text = row[2]
-    
     #try:   
     sub_category_info = get_sub_category(main_category, title, text)
     row[4] = sub_category_info
@@ -189,7 +186,7 @@ df['Country'] = ''
 # what should the value be in the dataframe if this fails?
 
 #### This is where we call the get_location function to get lat/long, oblast, city, country info
-applied_df = df.apply(lambda row: pd.Series(get_location(row.url, row.title)), axis=1, result_type='expand') ## Error?
+#applied_df = df.apply(lambda row: pd.Series(get_location(row.url, row.title)), axis=1, result_type='expand') ## Error?
 # if error, why? make more robust
 
 # attempt to determine date ###################################
@@ -198,7 +195,7 @@ applied_df = df.apply(lambda row: pd.Series(get_location(row.url, row.title)), a
 # what should the value be in the dataframe if this fails?
 df['Date'] = df['url'].apply(get_date)
 print(df["Date"])
-df.to_excel("pravda.xlsx",sheet_name="Pravda_Scraped")
+df.to_excel("april4_pravda.xlsx",sheet_name="Pravda_Scraped")
 print(df)
 
 
