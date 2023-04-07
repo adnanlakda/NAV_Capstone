@@ -4,7 +4,7 @@ import en_core_web_sm
 nlp = en_core_web_sm.load()
 import pandas as pd
 
-pravda_df = pd.read_excel("march10_pravda.xlsx")
+pravda_df = pd.read_excel("april4_pravda.xlsx")
 
 # Initiating empty list to store output
 output_1s = []  # GPE

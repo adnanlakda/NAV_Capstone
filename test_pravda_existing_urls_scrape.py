@@ -173,8 +173,8 @@ print(df['sub_category']) ## updated subcategory
 # can this fail? probably ... 
 # TODO: try/except?
 # what should the value be in the dataframe if this fails?
-df['Latitude'] = 1.12
-df['Longitude'] = 1.12 ### why is this defined?
+#df['Latitude'] = 1.12 ## 1.12 is a filler value and we do not need these columns
+#df['Longitude'] = 1.12 ### 1.12 is a filler value and we do not need these columns
 df['Date'] = ''
 df['City'] = ''
 df['Oblast'] = ''
