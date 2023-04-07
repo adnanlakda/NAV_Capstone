@@ -15,6 +15,13 @@ from get_category import *
 from get_sub_category import *
 from get_location import *
 from get_date import *
+## for get location imports
+import spacy
+from collections import Counter
+import en_core_web_sm
+nlp = en_core_web_sm.load()
+import pandas as pd
+import numpy as np
 
 import numpy as np
 import os
@@ -176,9 +183,9 @@ print(df['sub_category']) ## updated subcategory
 #df['Latitude'] = 1.12 ## 1.12 is a filler value and we do not need these columns
 #df['Longitude'] = 1.12 ### 1.12 is a filler value and we do not need these columns
 df['Date'] = ''
-df['City'] = ''
-df['Oblast'] = ''
-df['Country'] = ''
+##df['City'] = ''
+#df['Oblast'] = ''
+#df['Country'] = ''
 
 # call out to get_location module
 # can this fail? probably ... 
@@ -195,31 +202,65 @@ df['Country'] = ''
 # what should the value be in the dataframe if this fails?
 df['Date'] = df['url'].apply(get_date)
 print(df["Date"])
-df.to_excel("april4_pravda.xlsx",sheet_name="Pravda_Scraped")
+
+
+### GET LOCATION ### how do we combine this into the full?
+output_1s = []  # GPE
+output_2s = []  # LOC
+
+for txt in df.iloc[:,3]:
+    txt = txt.replace('"','')
+    doc = nlp(txt)
+    
+    entities = []
+    entity = []
+    
+    for ent in doc.ents:
+        if ent.label_ == "GPE":
+            entities.append(ent.text)
+    
+    # removing duplicates
+    res = np.unique(entities)
+    
+    
+    # Join the entities into a string
+    GPE = ", ".join(res)
+    
+    # Check if the number of locations listed in the GPE column is more than 10
+    if len(res) > 10:
+        GPE = 'Read article'
+    
+    # Append the output to the list of outputs
+    output_1s.append(GPE)
+
+    for ent in doc.ents:
+        if ent.label_ == "LOC":
+            entity.append(ent.text)
+            
+    LOC = ", ".join(entity)
+    
+    output_2s.append(LOC)
+    
+    # Add a new column named the GPE & LOC
+
+df['GPE'] = output_1s
+df['LOC'] = output_2s
+
+# Printing the final output
+print(pravda_df)
+
+
+
+df.to_excel("april7_pravda.xlsx",sheet_name="Pravda_Scraped")
 print(df)
+
+
+
+
+
+
+
 
 
 #### DID NOT RUN AFTER THIS #####
 # create final polished for download ##########################
-final_df = pd.DataFrame()
-final_df['Latitude'] = applied_df[0]
-final_df['Longitude'] = applied_df[1]
-final_df['Date'] = df['Date']
-final_df['Town'] = applied_df[2]
-final_df['Oblast'] = applied_df[3]
-final_df['Country'] = applied_df[4]
-final_df['Incident_type'] = df['incident_type']
-final_df['Incident_sub_type'] = df['sub_category']
-final_df['Source_1'] = df['url']
-
-final_df = final_df[final_df['Latitude'] != 11.100000]
-final_df = final_df[final_df["Country"].str.contains("UA")==True]
-final_df = final_df[final_df["Oblast"].str.contains("NA")==False]
-
-original_list = pd.read_csv("total_pravda.csv")
-total = pd.concat([original_list, final_df])
-total = total.drop_duplicates()
-total.to_csv('total_pravda.csv', index=False) # always downloads?
-print(df)
-print(final_df) # return df with category, date, and location information
-print(1)
