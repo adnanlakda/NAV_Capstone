@@ -6,7 +6,7 @@ import matplotlib as mpl
 
 
 import pandas as pd
-pravda_df = pd.read_excel("march10_pravda.xlsx")
+pravda_df = pd.read_excel("april4_pravda.xlsx")
 pravda_df.head(10)
 
 
