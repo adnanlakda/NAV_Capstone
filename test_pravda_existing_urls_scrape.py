@@ -15,13 +15,7 @@ from get_category import *
 from get_sub_category import *
 from get_location import *
 from get_date import *
-## for get location imports
-import spacy
-from collections import Counter
-import en_core_web_sm
-nlp = en_core_web_sm.load()
-import pandas as pd
-import numpy as np
+
 
 import numpy as np
 import os
@@ -204,6 +198,21 @@ df['Date'] = df['url'].apply(get_date)
 print(df["Date"])
 
 
+
+df.to_excel("april4_pravda.xlsx",sheet_name="Pravda_Scraped")
+print(df)
+
+## for get location imports
+import spacy
+from collections import Counter
+import en_core_web_sm
+nlp = en_core_web_sm.load()
+import pandas as pd
+import numpy as np
+
+
+pravda_df = pd.read_excel("april4_pravda.xlsx")
+pravda_df.head(10)
 ### GET LOCATION ### how do we combine this into the full?
 output_1s = []  # GPE
 output_2s = []  # LOC
@@ -248,12 +257,6 @@ df['LOC'] = output_2s
 
 # Printing the final output
 print(pravda_df)
-
-
-
-df.to_excel("april7_pravda.xlsx",sheet_name="Pravda_Scraped")
-print(df)
-
 
 
 
