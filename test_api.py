@@ -1,6 +1,7 @@
 import http.client, urllib.parse
 import json
 import pandas as pd
+from datetime import datetime
 
 conn = http.client.HTTPConnection('api.mediastack.com')
 
@@ -33,32 +34,41 @@ scraped_data = []
 
 for article in response_dict['data']:
     # Store the article data in variables
-    author = article['author']
-    title = article['title']
-    description = article['description']
     url = article['url']
+    title = article['title']
+    text = article['description']
+    author = article['author']
     source = article['source']
-    published_at = article['published_at']
+    date = article['published_at']
 
     # Append the scraped data to the list
     scraped_data.append({
-        'author': author,
-        'title': title,
-        'description': description,
         'url': url,
+        'title': title,
+        'text': text,
+        'author': author,
         'source': source,
-        'published_at': published_at
+        'Date': date
     })
 
+# store scraped_data into a dataframe and name it as df_API
 df_API = pd.DataFrame(scraped_data)
-#df = df[df['title'].isin(['Ukrain', 'Russian'])]
 
-df_API.head() #display dataframe
+# #group those articles come from the same source
+df_API = df_API.sort_values(by=['source'])
+
+# create empty columns
+df_API['incident_type'] = " "
+df_API['sub_category'] = " "
+df_API['Latitude'] = " "
+df_API['Longitude'] = " "
+
 
 # update the date format
 # Convert the 'published_at' column to datetime objects and then format them into yyyy-mm-dd strings
-df_API['published_at'] = pd.to_datetime(df_API['published_at']).dt.strftime('%Y-%m-%d')
+df_API['Date'] = pd.to_datetime(df_API['Date']).dt.strftime('%Y-%m-%d')
 
-# Assuming your dataframe is called df_API
-df_API.to_csv('API_news.csv', encoding = 'utf-8-sig',index=False)
+# Assuming your dataframe is called df_API, download it into a csv file
+# remember to change path to your desired location
+df_API.to_csv('/Users/grace/Downloads/API_news.csv', encoding = 'utf-8-sig', index=False)
 
