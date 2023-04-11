@@ -62,3 +62,14 @@ df_API['published_at'] = pd.to_datetime(df_API['published_at']).dt.strftime('%Y-
 # Assuming your dataframe is called df_API
 df_API.to_csv('API_news.csv', encoding = 'utf-8-sig',index=False)
 
+import os
+import shutil
+
+# Specify the path and filename of the CSV file you want to download
+src_file = os.path.join('path/to/CSV', 'API_news.csv')
+
+# Specify the path and filename where you want to save the CSV file
+dst_file = os.path.join('C:\\', 'API_news.csv')
+
+# Copy the CSV file to the specified location
+shutil.copy(src_file, dst_file)
