@@ -68,6 +68,20 @@ df_API['Longitude'] = " "
 # Convert the 'published_at' column to datetime objects and then format them into yyyy-mm-dd strings
 df_API['Date'] = pd.to_datetime(df_API['Date']).dt.strftime('%Y-%m-%d')
 
+# formating dataframe
+th_props = [
+  ('font-size', '11px'),
+  ('text-align', 'center'),
+  ('font-weight', 'bold'),
+  ]
+
+styles = [
+  dict(selector="th", props=th_props),
+  ]
+
+(df_API.style
+    .set_table_styles(styles))
+
 # Assuming your dataframe is called df_API, download it into a csv file
 # remember to change path to your desired location
 #df_API.to_csv('/Users/grace/Downloads/API_news.csv', encoding = 'utf-8-sig', index=False)
