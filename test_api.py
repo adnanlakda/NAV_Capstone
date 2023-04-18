@@ -83,7 +83,7 @@ styles = [
     .set_table_styles(styles))
 
 # Assuming your dataframe is called df_API, download it into a csv file
-# remember to change path to your desired location
+# remember to change path (the thing inside '') to your desired location
 #df_API.to_csv('/Users/grace/Downloads/API_news.csv', encoding = 'utf-8-sig', index=False)
 
 ## next step:
