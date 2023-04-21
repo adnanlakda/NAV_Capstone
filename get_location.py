@@ -3,19 +3,19 @@
 ## for get location imports
 import spacy
 from collections import Counter
-import en_core_web_sm
-nlp = en_core_web_sm.load()
+#import en_core_web_sm
+#nlp = en_core_web_sm.load()
 import pandas as pd
 import numpy as np
 
-
-pravda_df = pd.read_excel("april4_pravda.xlsx")
-pravda_df.head(10)
+def get_location(nlp,txt):
+#pravda_df = pd.read_excel("april4_pravda.xlsx")
+#pravda_df.head(10)
 ### GET LOCATION ### how do we combine this into the full?
-output_1s = []  # GPE
-output_2s = []  # LOC
+    output_1s = []  # GPE
+    output_2s = []  # LOC
 
-for txt in df.iloc[:,3]:
+    #for txt in df.iloc[:,3]:
     txt = txt.replace('"','')
     doc = nlp(txt)
     
@@ -48,13 +48,14 @@ for txt in df.iloc[:,3]:
     
     output_2s.append(LOC)
     
+    return output_1s, output_2s
     # Add a new column named the GPE & LOC
 
-df['GPE'] = output_1s
-df['LOC'] = output_2s
+#df['GPE'] = output_1s
+#df['LOC'] = output_2s
 
 # Printing the final output
-print(pravda_df)
+#print(pravda_df)
 
 
 
