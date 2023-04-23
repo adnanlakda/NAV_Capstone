@@ -5,6 +5,15 @@ from newspaper import Article
 import newspaper
 
 def get_date(url):
+    """
+        Extracts the publication date from a given news article URL.
+
+        Parameters:
+         url (str): The URL of the news article.
+
+        Returns:
+        str: The publication date of the news article in YYYY-MM-DD format.
+    """
     article = Article(url)
     article.download()
     article.parse()

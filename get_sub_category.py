@@ -20,7 +20,16 @@ targeted_df = sub_kws[sub_kws["main_category"].str.contains("targeted")==True]
 
 
 def get_sub_category(main_category, title, text):
-
+    """
+        Given the main category, title and text, this function returns a tuple containing the sub category, and the 
+        corresponding weightage for the sub category.
+        Args:
+        main_category (str): the main category of the news article
+        title (str): the title of the news article
+        text (str): the text content of the news article
+        Returns:
+        tuple: A tuple containing the sub category and its corresponding weightage for the given news article.
+    """    
     indexed_df = air_df
     sub_category = ''
     weight = 0.0

@@ -13,7 +13,18 @@ kws = pd.read_csv('kws.csv')
 sub_kws = pd.read_csv('sub_kws.csv')
 
 def get_category(title, text):
-    
+    """
+        Returns a list containing the main category and the total score of the input text.
+
+        Parameters:
+        title (str): A string containing the title of the input text.
+        text (str): A string containing the input text.
+
+        Returns:
+        list: A list containing the main category and the total score of the input text.
+    """
+
+# Initialize scores and variables
     air_score = 0
     blast_score = 0
     land_score = 0
@@ -61,10 +72,11 @@ def get_category(title, text):
             if main_category == 'targeted':
                 targeted_score = targeted_score + 4 * weight
                 title_score = title_score + 1
-            
+
+    # Tokenize the input text using spaCy           
     doc = nlp(text)
     tokens=[token.text for token in doc]
-    
+    # Loop through each token in the input text and check if it's a keyword
     for token in tokens:
         try:
             main_category = kws.loc[kws['KW']==token]['Category'].values[0]
@@ -74,7 +86,7 @@ def get_category(title, text):
             #print('Not a KW!')
             main_category = ''
             weight = 0
-        
+        # Update scores based on the main category
         if main_category != '':
             if main_category == 'air':
                 air_score = air_score + 1 * weight

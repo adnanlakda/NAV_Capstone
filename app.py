@@ -44,7 +44,7 @@ app_ui = ui.page_fluid(
 )
 
 # core of the app functionality ###############################################
-
+        
 def server(input, output, session):
 
     # TODO: improve server function docstring
