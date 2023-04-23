@@ -956,9 +956,15 @@ def server(input, output, session):
         
         urls = [...]  # list of URLs to download
 
+        def parse(self): 
+            self.throw_if_not_downloaded_verbose() 
+
         for url in urls:
             try:
                 article = newspaper.Article(url)
+                article.user_agent = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.0.0 Safari/537.36'
+                article.parse()
+                article.nlp()
                 article.download()
                 # process the article
             except newspaper.article.ArticleException as e:
