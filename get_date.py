@@ -14,8 +14,13 @@ def get_date(url):
         Returns:
         str: The publication date of the news article in YYYY-MM-DD format.
     """
-    article = Article(url)
-    article.download()
-    article.parse()
-    date = article.publish_date
-    return str(date).split()[0]
+
+    try:
+        article = Article(url)
+        article.download()
+        article.parse()
+        date = article.publish_date
+        return str(date).split()[0]
+    except: 
+        return '2023-00-00'
+    

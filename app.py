@@ -9,7 +9,7 @@ from spacy.lang.en.stop_words import STOP_WORDS
 from tqdm import tqdm
 import requests
 from bs4 import BeautifulSoup
-from get_category import *
+from get_category import * # consider more careful imports 
 from get_sub_category import *
 from get_location import *
 from get_date import *
@@ -271,6 +271,9 @@ def server(input, output, session):
                 # what should the value be in the dataframe if this fails?
                 #applied_df = df.apply(lambda row: pd.Series(get_location(row.url, row.title)), axis=1, result_type='expand')
                 #print(applied_df)
+
+                # PH: row.url above should not be a string, but should be a spacey object?
+                # PH: try get_location(nlp, row.text)
 
                 # TODO: try/except?
                 # what should the value be in the dataframe if this fails?
@@ -967,8 +970,10 @@ def server(input, output, session):
                 article.nlp()
                 article.download()
                 # process the article
-            except newspaper.article.ArticleException as e:
-                print(f'Skipping URL {url}: {str(e)}')
+            except:
+            # except newspaper.article.ArticleException as e:
+                print(f'Skipping URL {url}')
+            finally:
                 continue
 
         return path

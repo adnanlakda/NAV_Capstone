@@ -8,7 +8,7 @@ from collections import Counter
 import pandas as pd
 import numpy as np
 
-def get_location(nlp,txt):
+def get_location(nlp, txt):
 #pravda_df = pd.read_excel("april4_pravda.xlsx")
 #pravda_df.head(10)
 ### GET LOCATION ### how do we combine this into the full?
