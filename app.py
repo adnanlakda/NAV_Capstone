@@ -242,29 +242,28 @@ def server(input, output, session):
                 for index, row in tqdm(df.iterrows(), desc="Loading..."):
                     title = row[1]
                     text = row[2]
-                    
                     try:   
                         category_info = get_category(title, text)
-                        row[3] = category_info[0]
+                        row[6] = category_info[0] #row【6】？
                         #row[4] = np.float64(category_info[1])
                     except Exception as e: 
                         print(e)
-                        row[3] = 'none'
+                        row[6] = 'none'#row【6】？
 
                 df = df[df["incident_type"].str.contains("none")==False] # TODO: what does this do?
-                print(df)
+                print(df) #Does it get rid of the none-type incidents?
                 # attempt to determine category ###############################
                 # can this fail? probably ... 
                 # TODO: try/except?
                 # what should the value be in the dataframe if this fails?
 
                 for index, row in tqdm(df.iterrows(), desc="Loading..."):
-                    main_category = row[3]
+                    main_category = row[6] #row【6】？
                     title = row[1]
                     text = row[2]
                     #try:   
                     sub_category_info = get_sub_category(main_category, title, text)
-                    row[4] = sub_category_info
+                    row[7] = sub_category_info #row【7】？
                 # call out to get_location module
                 # can this fail? probably ... 
                 # TODO: try/except?
@@ -305,7 +304,7 @@ def server(input, output, session):
                 original_list = pd.read_csv("total_api_news.csv")
                 total = pd.concat([original_list, final_df])#combine scraped urls to the url database
                 total = total.drop_duplicates()
-                total.to_csv('total_api_news.csv', index=False) #update total_api_news file
+                total.to_csv('total_api_news.csv', index=False) #update total_api_news file, might take a long time as the database growing
                 ###update master_urls
                 existing_df = existings_urls_file.merge(total[['url']], on='url', how='outer')
                 existing_df.to_csv('master_urls_api.csv', index=False) #update master_urls_api file
@@ -842,7 +841,8 @@ def server(input, output, session):
                 print(df['text'])
                 print(df['incident_type'])
 
-                #nlp = spacy.load('en_core_web_sm') # TODO: why, what does it do? we don't call this
+                nlp = spacy.load('en_core_web_sm') 
+                # TODO: why, what does it do? we don't call this
                 #### This code loads a pre-trained statistical model for English language processing from 
                 # the spaCy library. The en_core_web_sm model is a small, but effective, model for processing
                 #  English text data that includes tokenization, named entity recognition, part-of-speech tagging, 
@@ -890,9 +890,7 @@ def server(input, output, session):
                 #df['Latitude'] = 1.12 ## 1.12 is a filler value and we do not need these columns
                 #df['Longitude'] = 1.12 ### 1.12 is a filler value and we do not need these columns
                 df['Date'] = ''
-                ##df['City'] = ''
-                #df['Oblast'] = ''
-                #df['Country'] = ''
+                
 
                 # call out to get_location module
                 # can this fail? probably ... 

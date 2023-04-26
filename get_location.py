@@ -48,7 +48,7 @@ def get_location(nlp, txt):
     
     output_2s.append(LOC)
     
-    return output_1s, output_2s
+    return [output_1s, output_2s]
     # Add a new column named the GPE & LOC
 
 #df['GPE'] = output_1s
