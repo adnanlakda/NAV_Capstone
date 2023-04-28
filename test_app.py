@@ -1,3 +1,26 @@
+from shiny import App, render, ui, reactive
+import pandas as pd
+from pathlib import Path
+import asyncio
+from usp.tree import sitemap_tree_for_homepage
+import spacy
+from spacy import displacy 
+from spacy.lang.en.stop_words import STOP_WORDS
+from tqdm import tqdm
+import requests
+from bs4 import BeautifulSoup
+from get_category import * # consider more careful imports 
+from get_sub_category import *
+from get_location import *
+from get_date import *
+import http.client, urllib.parse #api
+import json #api
+from datetime import datetime #datetime
+
+import numpy as np
+import os
+import sys
+
 
 existings_urls_file = pd.read_csv("master_urls_api.csv")
 print(existings_urls_file[0:])
@@ -63,16 +86,15 @@ print(df)
 #df = df[df["url"].str.contains("/news/")==True] # removes urls from the df that have /news/ in their url
 #print(df)
 #df = df[(df["url"].str.contains("2023")==True)]
-df.head() ## 
+print(df.columns) ## 
 # #group those articles come from the same source
 df = df.sort_values(by=['source'])
 
 # create empty columns
 df['incident_type'] = " "
 df['sub_category'] = " "
-df['Latitude'] = " "
-df['Longitude'] = " "
-
+df['GPE'] = " "
+df['LOC'] = " "
 
 # update the date format
 # Convert the 'published_at' column to datetime objects and then format them into yyyy-mm-dd strings
@@ -153,37 +175,41 @@ nlp = spacy.load('en_core_web_sm') # TODO: what does this do?
 for index, row in tqdm(df.iterrows(), desc="Loading..."):
     title = row[1]
     text = row[2]
-    
     try:   
         category_info = get_category(title, text)
-        row[3] = category_info[0]
+        row[6] = category_info[0] #row【6】？
         #row[4] = np.float64(category_info[1])
     except Exception as e: 
         print(e)
-        row[3] = 'none'
+        row[6] = 'none'#row【6】？
 
 df = df[df["incident_type"].str.contains("none")==False] # TODO: what does this do?
-print(df)
+pd.set_option('display.max_columns', None)
+pd.set_option('display.max_rows', None)
+print(df) #Does it get rid of the none-type incidents?
 # attempt to determine category ###############################
 # can this fail? probably ... 
 # TODO: try/except?
 # what should the value be in the dataframe if this fails?
 
 for index, row in tqdm(df.iterrows(), desc="Loading..."):
-    main_category = row[3]
+    main_category = row[6] #row【6】？
     title = row[1]
     text = row[2]
-    
     #try:   
-    sub_category_info = get_sub_category(main_category, title, text) # call out to get_sub_category module
-    row[4] = sub_category_info
-print(df)
+    sub_category_info = get_sub_category(main_category, title, text)
+    row[7] = sub_category_info #row【7】？
 # call out to get_location module
 # can this fail? probably ... 
 # TODO: try/except?
 # what should the value be in the dataframe if this fails?
-#applied_df = df.apply(lambda row: pd.Series(get_location(row.url, row.title)), axis=1, result_type='expand')
+applied_df = df.apply(lambda row: pd.Series(get_location(nlp, row.text)), axis=1, result_type='expand')
+print(applied_df)
+applied_df.to_excel("applied_df_test.xlsx",sheet_name="applied_df")
 #print(applied_df)
+
+# PH: row.url above should not be a string, but should be a spacey object?
+# PH: try get_location(nlp, row.text)
 
 # TODO: try/except?
 # what should the value be in the dataframe if this fails?
@@ -198,11 +224,12 @@ final_df['text'] = df['text']
 final_df['author'] = df['author']
 final_df['source'] = df['source']
 final_df['Date'] = df['Date']
-final_df['Latitude'] = df['Latitude']
-final_df['Longitude'] = df['Longitude']
+final_df['GPE'] = applied_df[0]
+final_df['LOC'] = applied_df[1]
 final_df['Incident_type'] = df['incident_type']
 final_df['Incident_sub_type'] = df['sub_category']
 
+final_df.to_excel("new_mediastack.xlsx",sheet_name="mediastack_Scraped")
 
 ##check if latitude is not default
 #final_df = final_df[final_df['Latitude'] != 11.100000]
@@ -214,9 +241,8 @@ print(final_df.columns)
 original_list = pd.read_csv("total_api_news.csv")
 total = pd.concat([original_list, final_df])#combine scraped urls to the url database
 total = total.drop_duplicates()
-total.to_csv('total_api_news.csv', index=False) #update total_api_news file
+total.to_csv('total_api_news.csv', index=False) #update total_api_news file, might take a long time as the database growing
 ###update master_urls
 existing_df = existings_urls_file.merge(total[['url']], on='url', how='outer')
 existing_df.to_csv('master_urls_api.csv', index=False) #update master_urls_api file
 return final_df # return df with category, date, and location information
-

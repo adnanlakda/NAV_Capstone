@@ -8,7 +8,7 @@ from collections import Counter
 import pandas as pd
 import numpy as np
 
-def get_location(nlp, txt):
+def get_location(nlp,txt):
 #pravda_df = pd.read_excel("april4_pravda.xlsx")
 #pravda_df.head(10)
 ### GET LOCATION ### how do we combine this into the full?
@@ -28,15 +28,15 @@ def get_location(nlp, txt):
         The original dataframe with new columns for GPE and LOC.
     """
 
-    output_1s = []  # GPE
-    output_2s = []  # LOC
+    output_gpe = []  # GPE
+    output_loc = []  # LOC
 
     #for txt in df.iloc[:,3]:
     txt = txt.replace('"','')
     doc = nlp(txt)
     
-    entities = []
-    entity = []
+    entities = [] #GPE
+    entity = [] #LOC
     
     for ent in doc.ents:
         if ent.label_ == "GPE":
@@ -52,9 +52,9 @@ def get_location(nlp, txt):
     # Check if the number of locations listed in the GPE column is more than 10
     if len(res) > 10:
         GPE = 'Read article'
-    
+    # LOC column usually will be less than 10
     # Append the output to the list of outputs
-    output_1s.append(GPE)
+    output_gpe.append(GPE)
 
     for ent in doc.ents:
         if ent.label_ == "LOC":
@@ -62,13 +62,11 @@ def get_location(nlp, txt):
             
     LOC = ", ".join(entity)
     
-    output_2s.append(LOC)
+    output_loc.append(LOC)
     
-    return [output_1s, output_2s]
+    return [output_gpe, output_loc]
     # Add a new column named the GPE & LOC
 
-#df['GPE'] = output_1s
-#df['LOC'] = output_2s
 
 # Printing the final output
 #print(pravda_df)
