@@ -42,7 +42,12 @@ app_ui = ui.page_fluid(
     )
     #ui.output_table("table")
 )
-
+        """
+            Defines the layout for a web application, which includes a sidebar with input fields and buttons for the user to interact with, 
+            as well as a main panel to display output. The input fields allow the user to select a source for the data and choose whether 
+            to use pre-existing data or not. The 'start' button initiates the scraping process, and the 'download' button allows the user 
+            to download the scraped data as a file. The 'scrape' output table displays the results of the scraping process.
+        """
 # core of the app functionality ###############################################
         
 def server(input, output, session):
@@ -952,6 +957,13 @@ def server(input, output, session):
     def download_final():
 
         # TODO: real doc string
+        """
+        Downloads news articles from a list of URLs, processes them using the newspaper module, and returns a file path to the 
+        downloaded articles in CSV format.
+
+        Returns:
+        str: The file path to the downloaded articles in CSV format.
+        """
 
         path = os.path.join(os.path.dirname(__file__), 'total.csv')
         
@@ -960,6 +972,9 @@ def server(input, output, session):
         def parse(self): 
             self.throw_if_not_downloaded_verbose() 
 
+        """
+        Parses the downloaded article to extract its content.
+        """
         for url in urls:
             try:
                 article = newspaper.Article(url)

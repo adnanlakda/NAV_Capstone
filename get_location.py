@@ -12,6 +12,22 @@ def get_location(nlp, txt):
 #pravda_df = pd.read_excel("april4_pravda.xlsx")
 #pravda_df.head(10)
 ### GET LOCATION ### how do we combine this into the full?
+
+    """
+    This function extracts GPE (geopolitical entities) and LOC (locations) from text data and returns a dataframe
+    with these entities as columns.
+    
+    Parameters:
+    -----------
+    pravda_df : pandas dataframe
+        The dataframe containing text data.
+        
+    Returns:
+    --------
+    pravda_df : pandas dataframe
+        The original dataframe with new columns for GPE and LOC.
+    """
+
     output_1s = []  # GPE
     output_2s = []  # LOC
 
