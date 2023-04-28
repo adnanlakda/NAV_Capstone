@@ -340,6 +340,13 @@ def server(input, output, session):
                 res = conn.getresponse()
                 data = res.read()
 
+                """
+                Scrapes news articles from the mediastack API.
+
+                Returns:
+                scraped_data (list): A list of dictionaries containing the scraped data, with keys 'url', 'title', 'text', 'author', 'source', and 'Date'.
+                """
+
                 import json
                 response_dict = json.loads(data.decode('utf-8'))
                 for article in response_dict['data']:
@@ -747,6 +754,13 @@ def server(input, output, session):
             elif input.use_file == 'no_use_file':  # do NOT use past website URL information
                 # TODO: what if this fails, can the code be made more robust here?
                 # try/except logic? probably just exit gracefully
+
+                 """
+                    Scrape news articles from the Pravda website without using existing website URL information.
+                    Extract relevant information such as date, location, and incident type.
+                    Returns a pandas dataframe with the extracted information.
+                 """
+
                 existings_urls_file = pd.read_csv("master_urls_pravda.csv") # TODO: file with existing URLs -- does it exist, is it accurate?
                 print(existings_urls_file[0:])
                 #kw_file = Path(__file__).parent / "kws.csv"
@@ -974,6 +988,8 @@ def server(input, output, session):
 
         """
         Parses the downloaded article to extract its content.
+
+        :return: The path of the downloaded article.
         """
         for url in urls:
             try:
@@ -992,6 +1008,13 @@ def server(input, output, session):
         return path
 
 # executes app ################################################################
+
+"""
+Executes the app.
+
+:param app_ui: The app UI.
+:param server: The server.
+"""
 
 app = App(app_ui, server, debug=False)
 
