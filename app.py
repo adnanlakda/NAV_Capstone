@@ -977,3 +977,5 @@ def server(input, output, session):
 # executes app ################################################################
 
 app = App(app_ui, server, debug=False)
+
+#Right COPY
