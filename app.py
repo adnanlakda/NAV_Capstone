@@ -104,7 +104,7 @@ def server(input, output, session):
                     'limit': 100, #limit output 100 news articles for each request
                     })
 
-                # request API to scrape and save the scraped information to data
+                # request API to scrape news and save the scraped information to data
                 conn.request('GET', "/v1/news?{}".format(params))
                 res = conn.getresponse()
                 data = res.read()
@@ -147,7 +147,7 @@ def server(input, output, session):
                 print(df)
                 df = df[~df["url"].isin(existing_urls)] # remove previously scraped sites from existing url list in this dataframe
                 
-                # group those articles come from the same source
+                # sort article by source so those articles came from the same source are displayed together
                 df = df.sort_values(by=['source'])
 
                 # create empty columns
@@ -214,12 +214,16 @@ def server(input, output, session):
                 df = df[df["title"].str.contains("Analysts")==False]
                 df = df[df["title"].str.contains("visits")==False]
 
-                nlp = spacy.load('en_core_web_sm') # TODO: what does this do?
+                ### This code loads a pre-trained statistical model for English language processing from the spaCy library. 
+                # The en_core_web_sm model is a small, but effective model for processing English text data
+                # It includes tokenization, named entity recognition, part-of-speech tagging, and dependency parsing.
+                nlp = spacy.load('en_core_web_sm')
+
 
                 # attempt to determine category ################
                 # this can fail, and when it does you might see "Divide by zero" in the log
                 # TODO: could there be a better message for failure?
-                # what should the value be in the dataframe if this fails?
+                # if this fails, the value in the dataframe could be 'none'
                 for index, row in tqdm(df.iterrows(), desc="Loading..."):
                     title = row[1]
                     text = row[2]
@@ -231,15 +235,15 @@ def server(input, output, session):
                         print(e)
                         row[6] = 'none'
 
-                df = df[df["incident_type"].str.contains("none")==False] #exclude rows where the value in the incident_type column contains the string "none"
+                df = df[df["incident_type"].str.contains("none")==False] # exclude rows where the value in the incident_type column contains the string 'none'
                 pd.set_option('display.max_columns', None)
                 pd.set_option('display.max_rows', None)
                 print(df) #Does it get rid of the none-type incidents? A: yes
 
-                # attempt to determine category ###############################
+                # attempt to determine sub_category ###############################
                 # can this fail? probably ... 
                 # TODO: try/except?
-                # what should the value be in the dataframe if this fails?
+                # if this fails, no value will be displayed for that URL in the incident_sub_type column in the dataframe
 
                 for index, row in tqdm(df.iterrows(), desc="Loading..."):
                     main_category = row[6] 
@@ -261,8 +265,9 @@ def server(input, output, session):
                 # PH: row.url above should not be a string, but should be a spacey object?
                 # PH: try get_location(nlp, row.text)
 
+                # call out to get_date module, attempt to get date of the news article
                 # TODO: try/except?
-                # what should the value be in the dataframe if this fails?
+                # if this fails, the value should be 'none' in the dataframe
                 df['Date'] = df['url'].apply(get_date)
                 print(df)
 
@@ -289,12 +294,14 @@ def server(input, output, session):
                 original_list = pd.read_csv("total_api_news.csv")
                 total = pd.concat([original_list, final_df])#combine scraped urls to the url database
                 
+                # try dropping the duplicates - if this fails, pass.
                 try:
                     total = total.drop_duplicates()
                 except:
                     pass
 
-                total.to_csv('total_api_news.csv', index=False) #update total_api_news file, might take a long time as the database growing
+                total.to_csv('total_api_news.csv', index=False) #update total_api_news file, might take more time as the database growing
+                
                 ### update master_urls
                 existing_df = existings_urls_file.merge(total[['url']], on='url', how='outer')
                 existing_df.to_csv('master_urls_api.csv', index=False) #update master_urls_api file
@@ -360,14 +367,9 @@ def server(input, output, session):
                 df = pd.DataFrame(scraped_data)
                 print(df)
                 df = df[~df["url"].isin(existing_urls)] # remove previously scraped sites from existing url list in this dataframe
-                # TODO: why? what does it do?
-                #df = df[df["url"].str.contains("/eng/")==True]
-                print(df)
-                #df = df[df["url"].str.contains("/news/")==True] # removes urls from the df that have /news/ in their url
-                #print(df)
-                #df = df[(df["url"].str.contains("2023")==True)]
-                print(df.columns) ## 
-                # #group those articles come from the same source
+                print(df.columns) ## checking what columns the df have
+
+                # sort article by source so those articles came from the same source are displayed together
                 df = df.sort_values(by=['source'])
 
                 # create empty columns
@@ -380,17 +382,6 @@ def server(input, output, session):
                 # Convert the 'published_at' column to datetime objects and then format them into yyyy-mm-dd strings
                 df['Date'] = pd.to_datetime(df['Date']).dt.strftime('%Y-%m-%d')
 
-                # Assuming your dataframe is called df_API, download it into a csv file
-                # remember to change path to your desired location
-
-                ## API Chunk#####
-
-                # TODO: determine if this code block is needed
-                #df = df[df["url"].str.contains("/national/")==True]
-                #df = df[df["url"].str.contains("tag")==False]
-                #for url in existing_urls:
-                #    df = df.drop(df[df['url'].str.match(url, na=False)].index)
-                # print(df)
 
                 # for each new url scrape using beautiful soup ################
                 # store information in Pandas dataframe initialized above
@@ -446,39 +437,42 @@ def server(input, output, session):
                 df = df[df["title"].str.contains("Analysts")==False]
                 df = df[df["title"].str.contains("visits")==False]
 
-                nlp = spacy.load('en_core_web_sm') # TODO: what does this do?
+                # loads a pre-trained statistical model for English language processing from the spaCy library. 
+                nlp = spacy.load('en_core_web_sm') 
 
                 # attempt to determine category ###############################
                 # this can fail, and when it does you might see "Divide by zero" in the log
                 # TODO: could there be a better message for failure?
-                # what should the value be in the dataframe if this fails?
+                # if this fails, it will display 'none' in the incident_sub_type column for that URL in dataframe
                 for index, row in tqdm(df.iterrows(), desc="Loading..."):
                     title = row[1]
                     text = row[2]
                     try:   
                         category_info = get_category(title, text)
-                        row[6] = category_info[0] #row【6】？
+                        row[6] = category_info[0] 
                         #row[4] = np.float64(category_info[1])
                     except Exception as e: 
                         print(e)
-                        row[6] = 'none'#row【6】？
+                        row[6] = 'none'
 
-                df = df[df["incident_type"].str.contains("none")==False] # TODO: what does this do?
+                df = df[df["incident_type"].str.contains("none")==False] # exclude rows where the value in the incident_type column contains the string 'none'
                 pd.set_option('display.max_columns', None)
                 pd.set_option('display.max_rows', None)
                 print(df) #Does it get rid of the none-type incidents?
-                # attempt to determine category ###############################
+
+                # attempt to determine sub_category ###############################
                 # can this fail? probably ... 
                 # TODO: try/except?
-                # what should the value be in the dataframe if this fails?
+                # no value would be displayed in the dataframe if this fails
 
                 for index, row in tqdm(df.iterrows(), desc="Loading..."):
-                    main_category = row[6] #row【6】？
+                    main_category = row[6]
                     title = row[1]
                     text = row[2]
                     #try:   
                     sub_category_info = get_sub_category(main_category, title, text)
-                    row[7] = sub_category_info #row【7】？
+                    row[7] = sub_category_info
+
                 # call out to get_location module
                 # can this fail? probably ... 
                 # TODO: try/except?
@@ -491,8 +485,9 @@ def server(input, output, session):
                 # PH: row.url above should not be a string, but should be a spacey object?
                 # PH: try get_location(nlp, row.text)
 
+                # call out to get_date module, attempt to get date of the news article
                 # TODO: try/except?
-                # what should the value be in the dataframe if this fails?
+                # if this fails, the value should be 'none' in the dataframe
                 df['Date'] = df['url'].apply(get_date)
                 print(df)
 
@@ -512,7 +507,7 @@ def server(input, output, session):
                 final_df.to_excel("new_mediastack.xlsx",sheet_name="mediastack_Scraped")
 
                 
-                #Display full final_df
+                # display full final_df
                 pd.set_option('display.max_columns', None)
                 pd.set_option('display.max_rows', None)
                 print(final_df.columns)
@@ -520,13 +515,15 @@ def server(input, output, session):
                 original_list = pd.read_csv("total_api_news.csv")
                 total = pd.concat([original_list, final_df])#combine scraped urls to the url database
                 
+                # try dropping duplicate records, if this fails, then pass
                 try:
                     total = total.drop_duplicates()
                 except:
                     pass
             
                 total.to_csv('total_api_news.csv', index=False) #update total_api_news file, might take a long time as the database growing
-                ###update master_urls
+                
+                ### update master_urls
                 existing_df = existings_urls_file.merge(total[['url']], on='url', how='outer')
                 existing_df.to_csv('master_urls_api.csv', index=False) #update master_urls_api file
                 return final_df # return df with category, date, and location information
@@ -636,11 +633,12 @@ def server(input, output, session):
                 print(df['text'])
                 print(df['incident_type'])
 
-                nlp = spacy.load('en_core_web_sm') # TODO: why, what does it do? we don't call this
-                #### This code loads a pre-trained statistical model for English language processing from 
-                # the spaCy library. The en_core_web_sm model is a small, but effective, model for processing
-                #  English text data that includes tokenization, named entity recognition, part-of-speech tagging, 
-                # and dependency parsing.
+
+               #### This code loads a pre-trained statistical model for English language processing from the spaCy library.
+               # The en_core_web_sm model is a small, but effective model for processing English text data
+               # It includes tokenization, named entity recognition, part-of-speech tagging, and dependency parsing. 
+                nlp = spacy.load('en_core_web_sm') 
+ 
 
                 # attempt to determine category ###############################
                 # this can fail, and when it does you might see "Divide  by zero" in the log
@@ -933,7 +931,7 @@ def server(input, output, session):
         #    return 'tbd'
 
     # function for downloading results files ##################################
-    # files have names like total_<website_name>.csv
+    # files have names like 'total_<website_name>.csv'
     @session.download()
     def download_final():
 
