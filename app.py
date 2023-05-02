@@ -31,9 +31,9 @@ app_ui = ui.page_fluid(
         ui.panel_sidebar(
             #ui.input_select("website", "Choose a source:", {"mediastack" : "MediaStack API", "pravda":"Pravda", "[website_name]":"website_name"}),
             ui.input_select("website", "Choose a source:", {"mediastack" : "MediaStack API", "pravda":"Pravda"}),
-            ui.input_radio_buttons("use_file", "Use pre-existing data?", file_choices),
+            #ui.input_radio_buttons("use_file", "Use pre-existing data?", file_choices),
             ui.input_action_button("start", "Start"),
-            ui.download_button("download_final", "Download", class_="btn-primary")
+            #ui.download_button("download_final", "Download", class_="btn-primary")
         ),
         ui.panel_main(
             #ui.output_text_verbatim("scrape", placeholder=True)
@@ -74,15 +74,15 @@ def server(input, output, session):
         :return: No explicit return. Sub-functions return various Pandas dataframes. 
     
     """
-######### WHAT IS THIS ?###########
+######### Shiny Output Controls ###########
     @output
     @render.table
     @reactive.event(input.start)
     async def scrape():
 
-        # TODO: needs real doc string
+        ##### Choose API to Scrape News Articles #####
 
-        if input.website() == 'mediastack': # for independent website ########
+        if input.website() == 'mediastack': # for mediastack API
 
             if input.use_file != 'no_use_file': # use past website URL information
 
@@ -94,15 +94,17 @@ def server(input, output, session):
                 print(existing_urls[0:1])
                 conn = http.client.HTTPConnection('api.mediastack.com')
 
+                # specifying parameters for the request. You can change the params based on needs
                 params = urllib.parse.urlencode({
                     'access_key': 'd9babc2a947d03f9b887715a6df56a7a',
                     'categories': 'general',
                     'keywords': 'Ukraine Russian',
                     'languages': 'ar, en, fr, ru, zh',
                     'sort': 'published_desc',
-                    'limit': 100,
+                    'limit': 100, #limit output 100 news articles for each request
                     })
 
+                # request API to scrape and save the scraped information to data
                 conn.request('GET', "/v1/news?{}".format(params))
                 res = conn.getresponse()
                 data = res.read()
@@ -122,7 +124,7 @@ def server(input, output, session):
                 scraped_data = []
 
                 for article in response_dict['data']:
-                    # Store the article data in variables
+                    # store the article data in variables
                     url = article['url']
                     title = article['title']
                     text = article['description']
@@ -130,7 +132,7 @@ def server(input, output, session):
                     source = article['source']
                     date = article['published_at']
 
-                    # Append the scraped data to the list
+                    # append the scraped data to the list
                     scraped_data.append({
                         'url': url,
                         'title': title,
@@ -144,14 +146,8 @@ def server(input, output, session):
                 df = pd.DataFrame(scraped_data)
                 print(df)
                 df = df[~df["url"].isin(existing_urls)] # remove previously scraped sites from existing url list in this dataframe
-                # TODO: why? what does it do?
-                #df = df[df["url"].str.contains("/eng/")==True]
-                print(df)
-                #df = df[df["url"].str.contains("/news/")==True] # removes urls from the df that have /news/ in their url
-                #print(df)
-                #df = df[(df["url"].str.contains("2023")==True)]
-                print(df.columns) ## 
-                # #group those articles come from the same source
+                
+                # group those articles come from the same source
                 df = df.sort_values(by=['source'])
 
                 # create empty columns
@@ -160,21 +156,9 @@ def server(input, output, session):
                 df['GPE'] = " "
                 df['LOC'] = " "
 
-                # update the date format
-                # Convert the 'published_at' column to datetime objects and then format them into yyyy-mm-dd strings
+                # update the date format: convert the 'published_at' column to datetime objects and then format them into yyyy-mm-dd strings
                 df['Date'] = pd.to_datetime(df['Date']).dt.strftime('%Y-%m-%d')
-
-                # Assuming your dataframe is called df_API, download it into a csv file
-                # remember to change path to your desired location
-
-                ## API Chunk#####
-
-                # TODO: determine if this code block is needed
-                #df = df[df["url"].str.contains("/national/")==True]
-                #df = df[df["url"].str.contains("tag")==False]
-                #for url in existing_urls:
-                #    df = df.drop(df[df['url'].str.match(url, na=False)].index)
-                # print(df)
+            
 
                 # for each new url scrape using beautiful soup ################
                 # store information in Pandas dataframe initialized above
@@ -232,7 +216,7 @@ def server(input, output, session):
 
                 nlp = spacy.load('en_core_web_sm') # TODO: what does this do?
 
-                # attempt to determine category ###############################
+                # attempt to determine category ################
                 # this can fail, and when it does you might see "Divide by zero" in the log
                 # TODO: could there be a better message for failure?
                 # what should the value be in the dataframe if this fails?
@@ -241,28 +225,30 @@ def server(input, output, session):
                     text = row[2]
                     try:   
                         category_info = get_category(title, text)
-                        row[6] = category_info[0] #row【6】？
+                        row[6] = category_info[0] 
                         #row[4] = np.float64(category_info[1])
                     except Exception as e: 
                         print(e)
-                        row[6] = 'none'#row【6】？
+                        row[6] = 'none'
 
-                df = df[df["incident_type"].str.contains("none")==False] # TODO: what does this do?
+                df = df[df["incident_type"].str.contains("none")==False] #exclude rows where the value in the incident_type column contains the string "none"
                 pd.set_option('display.max_columns', None)
                 pd.set_option('display.max_rows', None)
-                print(df) #Does it get rid of the none-type incidents?
+                print(df) #Does it get rid of the none-type incidents? A: yes
+
                 # attempt to determine category ###############################
                 # can this fail? probably ... 
                 # TODO: try/except?
                 # what should the value be in the dataframe if this fails?
 
                 for index, row in tqdm(df.iterrows(), desc="Loading..."):
-                    main_category = row[6] #row【6】？
+                    main_category = row[6] 
                     title = row[1]
                     text = row[2]
                     #try:   
                     sub_category_info = get_sub_category(main_category, title, text)
-                    row[7] = sub_category_info #row【7】？
+                    row[7] = sub_category_info
+
                 # call out to get_location module
                 # can this fail? probably ... 
                 # TODO: try/except?
@@ -295,21 +281,26 @@ def server(input, output, session):
 
                 final_df.to_excel("new_mediastack.xlsx",sheet_name="mediastack_Scraped")
 
-                #Display full final_df
+                # display full final_df
                 pd.set_option('display.max_columns', None)
                 pd.set_option('display.max_rows', None)
                 print(final_df.columns)
 
                 original_list = pd.read_csv("total_api_news.csv")
                 total = pd.concat([original_list, final_df])#combine scraped urls to the url database
-                total = total.drop_duplicates()
+                
+                try:
+                    total = total.drop_duplicates()
+                except:
+                    pass
+
                 total.to_csv('total_api_news.csv', index=False) #update total_api_news file, might take a long time as the database growing
-                ###update master_urls
+                ### update master_urls
                 existing_df = existings_urls_file.merge(total[['url']], on='url', how='outer')
                 existing_df.to_csv('master_urls_api.csv', index=False) #update master_urls_api file
                 return final_df # return df with category, date, and location information
             
-            elif input.use_file == 'no_use_file': # do NOT use past website URL information
+        elif input.use_file == 'no_use_file': # do NOT use past website URL information
 
                 existings_urls_file = pd.read_csv("master_urls_api.csv")
                 print(existings_urls_file[0:])
@@ -528,7 +519,12 @@ def server(input, output, session):
 
                 original_list = pd.read_csv("total_api_news.csv")
                 total = pd.concat([original_list, final_df])#combine scraped urls to the url database
-                total = total.drop_duplicates()
+                
+                try:
+                    total = total.drop_duplicates()
+                except:
+                    pass
+            
                 total.to_csv('total_api_news.csv', index=False) #update total_api_news file, might take a long time as the database growing
                 ###update master_urls
                 existing_df = existings_urls_file.merge(total[['url']], on='url', how='outer')
