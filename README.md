@@ -37,7 +37,7 @@
 ```
 - [x] Create diagram of how app functions and code works together
 
-  <img src=https://github.com/katgrubbs14/NAV_Capstone/blob/ca0aff7b12955810ba14fbba0576ab9382092fc7/Model Logic.png>
+  <img src=https://github.com/katgrubbs14/NAV_Capstone/blob/ca0aff7b12955810ba14fbba0576ab9382092fc7/model.png>
 
 - [ ] Create technical instructions for future groups 
 
