@@ -720,7 +720,12 @@ def server(input, output, session):
 
                 original_list = pd.read_csv("total_pravda_news.csv")
                 total = pd.concat([original_list, final_df])#combine scraped urls to the url database
-                total = total.drop_duplicates()
+
+                try:
+                    total = total.drop_duplicates()
+                except:
+                    pass
+                
                 total.to_csv('total_pravda_news.csv', index=False) #update total_api_news file
                 ###update master_urls
                 existing_df = existings_urls_file.merge(total[['url']], on='url', how='outer')
@@ -919,7 +924,12 @@ def server(input, output, session):
 
                 original_list = pd.read_csv("total_pravda_news.csv")
                 total = pd.concat([original_list, final_df])#combine scraped urls to the url database
-                total = total.drop_duplicates()
+
+                try:
+                    total = total.drop_duplicates()
+                except:
+                    pass
+
                 total.to_csv('total_pravda_news.csv', index=False) #update total_api_news file
                 ###update master_urls
                 existing_df = existings_urls_file.merge(total[['url']], on='url', how='outer')
