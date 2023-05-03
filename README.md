@@ -38,7 +38,7 @@
 - [x] Create diagram of how app functions and code works together
 
 
-  ![Dataset](Model Logic.png) 
+  ![Dataset](model.png) 
 
 
 - [ ] Create technical instructions for future groups 
