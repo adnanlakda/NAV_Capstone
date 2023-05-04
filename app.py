@@ -306,7 +306,7 @@ def server(input, output, session):
                 existing_df = existings_urls_file.merge(total[['url']], on='url', how='outer')
                 existing_df.to_csv('master_urls_api.csv', index=False) #update master_urls_api file
                 return final_df # return df with category, date, and location information
-            
+######################## FOR FUTURE GROUP: RECOMMEND DELETING LINES 310-529 #####################################################################
         elif input.use_file == 'no_use_file': # do NOT use past website URL information
 
                 existings_urls_file = pd.read_csv("master_urls_api.csv")
@@ -460,7 +460,7 @@ def server(input, output, session):
                 pd.set_option('display.max_rows', None)
                 print(df) #Does it get rid of the none-type incidents?
 
-                # attempt to determine sub_category ###############################
+                # attempt to determine sub_category 
                 # can this fail? probably ... 
                 # TODO: try/except?
                 # no value would be displayed in the dataframe if this fails
@@ -731,7 +731,7 @@ def server(input, output, session):
                 existing_df = existings_urls_file.merge(total[['url']], on='url', how='outer')
                 existing_df.to_csv('master_urls_pravda.csv', index=False) #update master_urls_api file
                 return final_df # return df with category, date, and location information
-
+############### FOR FUTURE GROUP: RECOMMEND DELETING LINES 735 - 937 ###########################################################
             elif input.use_file == 'no_use_file':  # do NOT use past website URL information
                 # TODO: what if this fails, can the code be made more robust here?
                 # try/except logic? probably just exit gracefully
