@@ -55,9 +55,9 @@
 
 #### 4. Add API branch
 - [x] Sign up for Mediastack API 
-- [ ] Add branch for social in Shiny UI and `app.py`
+- [x] Add branch for social in Shiny UI and `app.py`
 - [ ] **(optional)** Twitter?
 
 #### 5. Improve Usability
-- [ ] Improve non-technical user documentation and instructions
-- [ ] Test until the program runs or fails gracefully in all reasonable scenarios
+- [x] Improve non-technical user documentation and instructions
+- [x] Test until the program runs or fails gracefully in all reasonable scenarios
