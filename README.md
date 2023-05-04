@@ -4,7 +4,7 @@
 
 #### 1. Learn how to _actually_ use github. No more "Add files via upload" :) Either: 
 - [x] Learn how to use GitHub Desktop - great GUI interface
-- [ ] Learn how to use git from command line
+- [x] Learn how to use git from command line
 
 #### 2. Improve GitHub
 - [x] Determine what files are needed in GitHub
@@ -39,15 +39,17 @@
 
   <img src=https://github.com/katgrubbs14/NAV_Capstone/blob/main/model.jpeg>
 
-- [ ] Create technical instructions for future groups 
+- [x] Create technical instructions for future groups 
 
 #### 3. Improve existing code
-- [ ] Annotate code:
-  - [ ] Add official doc strings to modules, classes, and functions: https://sphinx-rtd-tutorial.readthedocs.io/en/latest/docstrings.html
-  - [ ] Add in line comments to other parts of code
-- [ ] Figure out a way to test simpler runs that don't take so long.
-- [ ] Make code more robust to failures with try/except logic
-- [ ] Reduce code repetition by creating functions and external files for key words, etc.
+- [x] Annotate code:
+  - [x] Add official doc strings to modules, classes, and functions: https://sphinx-rtd-tutorial.readthedocs.io/en/latest/docstrings.html
+  - [x] Add in line comments to other parts of code
+- [x] Figure out a way to test simpler runs that don't take so long.
+  - [x] The way to do test runs simpler is to create a separate file that pulls the section of the codes out of the def loop
+- [x] Make code more robust to failures with try/except logic
+- [x] Reduce code repetition by creating functions and external files for key words, etc.
+- [x] Debug using try and except logic
 - [ ] **(optional)** Add logging and messages so you know what is happening in the code while it is running
 - [ ] **(optional)** Reduce requirements.txt
 
