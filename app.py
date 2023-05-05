@@ -259,7 +259,6 @@ def server(input, output, session):
                 # what should the value be in the dataframe if this fails?
                 applied_df = df.apply(lambda row: pd.Series(get_location(nlp, row.text)), axis=1, result_type='expand')
                 print(applied_df)
-                applied_df.to_excel("applied_df_test.xlsx",sheet_name="applied_df")
                 #print(applied_df)
 
                 # PH: row.url above should not be a string, but should be a spacey object?
@@ -479,7 +478,6 @@ def server(input, output, session):
                 # what should the value be in the dataframe if this fails?
                 applied_df = df.apply(lambda row: pd.Series(get_location(nlp, row.text)), axis=1, result_type='expand')
                 print(applied_df)
-                applied_df.to_excel("applied_df_test.xlsx",sheet_name="applied_df")
                 #print(applied_df)
 
                 # PH: row.url above should not be a string, but should be a spacey object?
