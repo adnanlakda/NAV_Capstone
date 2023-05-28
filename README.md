@@ -2,11 +2,9 @@
 
 ### Proposed TODOs:
 
-#### 1. Learn how to _actually_ use github. No more "Add files via upload" :) Either: 
-- [x] Learn how to use GitHub Desktop - great GUI interface
-- [x] Learn how to use git from command line
 
-#### 2. Improve GitHub
+
+#### 1. Improve GitHub
 - [x] Determine what files are needed in GitHub
   - [x] Remove unneeded files
 - [x] Create listing of files with descriptions
@@ -41,7 +39,7 @@
 
 - [x] Create technical instructions for future groups 
 
-#### 3. Improve existing code
+#### 2. Improve existing code
 - [x] Annotate code:
   - [x] Add official doc strings to modules, classes, and functions: https://sphinx-rtd-tutorial.readthedocs.io/en/latest/docstrings.html
   - [x] Add in line comments to other parts of code
@@ -53,11 +51,11 @@
 - [ ] **(optional)** Add logging and messages so you know what is happening in the code while it is running
 - [ ] **(optional)** Reduce requirements.txt
 
-#### 4. Add API branch
+#### 3. Add API branch
 - [x] Sign up for Mediastack API 
 - [x] Add branch for social in Shiny UI and `app.py`
 - [ ] **(optional)** Twitter?
 
-#### 5. Improve Usability
+#### 4. Improve Usability
 - [x] Improve non-technical user documentation and instructions
 - [x] Test until the program runs or fails gracefully in all reasonable scenarios
